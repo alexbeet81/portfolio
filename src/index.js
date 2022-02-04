@@ -3,9 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 
+import { DarkLightContextProvider } from "./store/dark-light-context";
+
 ReactDOM.render(
-  <React.StrictMode>
+  <DarkLightContextProvider>
     <App />
-  </React.StrictMode>,
+  </DarkLightContextProvider>,
   document.getElementById("root")
 );

@@ -18,6 +18,7 @@
 
 .navbarDark a:hover {
   border-bottom: 3px solid var(--dark-highlight);
+  color: var(--dark-highlight);
 }
 
 .navbar a {
@@ -32,15 +33,22 @@
   transition: all 0.3s ease-in-out;
 }
 
-.navbarItem:hover {
-  color: var(--dark-highlight);
-}
-
-.test {
-  color: red;
+.darkLightModeIcon {
+  color: var(--dark-text-two);
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   top: 0;
   left: 0;
   z-index: 10;
-  margin-top: 0.5rem;
+  text-align: center;
+  margin: 0 0 0 1rem;
+  height: 3.5rem;
+}
+
+@media (max-width: 412px) {
+  .darkLightModeIcon {
+    font-size: 1.5rem;
+  }
 }
