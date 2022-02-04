@@ -21,6 +21,20 @@
   color: var(--dark-highlight);
 }
 
+.navbarLight {
+  background-color: var(--light-bg-two);
+}
+
+.navbarLight a {
+  color: var(--light-text-two);
+  border-bottom: 3px solid transparent;
+}
+
+.navbarLight a:hover {
+  border-bottom: 3px solid var(--light-highlight);
+  color: var(--light-highlight);
+}
+
 .navbar a {
   display: block;
   font-family: 'Roboto';
