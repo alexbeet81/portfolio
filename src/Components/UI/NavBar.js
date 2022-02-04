@@ -1,14 +1,24 @@
+import { useContext } from "react";
 import { Fragment } from "react/cjs/react.production.min";
 import { MdDarkMode } from "react-icons/md";
 
+import DarkLightContext from "../../store/dark-light-context";
 import classes from "./NavBar.module.css";
 
 const NavBar = () => {
+  const darkLightCtx = useContext(DarkLightContext);
+
+  const darkLightIconHandler = (event) => {
+    event.preventDefault();
+
+    darkLightCtx.toggleDarkLight();
+  }
+
   return (
     <Fragment>
-      <h1 className={classes.darkLightModeIcon}>
+      <div onClick={darkLightIconHandler} className={classes.darkLightModeIcon}>
           <MdDarkMode />
-      </h1>
+      </div>
       <div className={`${classes.navbar} ${classes.navbarDark}`}>
         <a href="#home">Home</a>
         <a href="#work">Work</a>
