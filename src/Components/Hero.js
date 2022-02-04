@@ -1,5 +1,5 @@
 import classes from "./Hero.module.css";
-import heroDark from '../../public/hero-dark.png';
+import heroDark from '../images/hero-dark.png';
 
 const Hero = () => {
   return (
@@ -18,7 +18,7 @@ const Hero = () => {
         </p>
       </div>
       <div>
-        <img src={heroDark} alt="hero-image"></img>
+        {/* <img src={heroDark} alt="hero-image"></img> */}
       </div>
     </section>
   );
