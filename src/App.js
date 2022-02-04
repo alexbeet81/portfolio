@@ -1,8 +1,9 @@
 import classes from './App.module.css';
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import DarkLightContext from './store/dark-light-context';
 
 import NavBar from './Components/UI/NavBar';
+import Hero from './Components/Hero';
 
 function App() {
   const darkLightCtx = useContext(DarkLightContext);
@@ -14,6 +15,9 @@ function App() {
   return (
     <div className={`${classes.background} ${backgroundClasses}`}>
       <NavBar />
+      <main className={classes.mainContainer}>
+        <Hero />
+      </main>
     </div>
   );
 }

@@ -10,3 +10,10 @@
 .backgroundLight {
   background-color: var(--light-bg-one);
 }
+
+.mainContainer {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100rem;
+  min-height: 100vh;
+}
