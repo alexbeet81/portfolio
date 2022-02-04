@@ -1,6 +1,8 @@
 import classes from './App.module.css';
 import { useState } from 'react'; 
 
+import NavBar from './Components/UI/NavBar';
+
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
@@ -12,6 +14,7 @@ function App() {
 
   return (
     <div className={`${classes.background} ${backgroundClasses}`}>
+      <NavBar />
       <button onClick={darkModeHandler}>Click me</button>
     </div>
   );

@@ -1,0 +1,12 @@
+:root {
+  --navbar-background-dark: #283754;
+}
+
+.navbar {
+  width: 100vw;
+  height: 3.5rem;
+}
+
+.navbarDark {
+  background-color: var(--bg-color-light);
+}
