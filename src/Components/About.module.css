@@ -13,6 +13,7 @@
 
 .aboutSection h1 {
   font-size: 2rem;
+  margin-top: 0;
 }
 
 .aboutSectionDarkMode h1 {
@@ -31,14 +32,12 @@
   color: var(--light-text-two);
 }
 
-
-
-
 @media (max-width: 1080px) {
   .aboutSection {
     display: flex;
     flex-direction: column-reverse;
   }
+
   .image {
     align-self: center;
   }
