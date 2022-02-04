@@ -1,0 +1,113 @@
+.heroSection {
+  margin: 0 auto;
+  max-width: 62.5rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 10rem;
+}
+
+.heroSection a {
+  text-decoration: none;
+}
+
+.heroSectionDarkMode a {
+  color: var(--dark-highlight);
+}
+
+.heroSectionLightMode a {
+  color: var(--light-highlight);
+}
+
+.heroSection img {
+  height: 22rem;
+}
+
+.image {
+  justify-self: end;
+}
+
+.heroSection h1 {
+  font-weight: medium;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.heroSectionDarkMode h1 {
+  color: var(--dark-highlight);
+}
+
+.heroSectionLightMode h1 {
+  color: var(--light-highlight);
+}
+
+.heroSection h2 {
+  font-size: clamp(2.7rem, 6vw + 1rem, 4.7rem);
+  font-weight: bold;
+  margin: 0;
+}
+
+.heroSectionDarkMode h2 {
+  color: var(--dark-text-one);
+}
+
+.heroSectionLightMode h2 {
+  color: var(--light-text-one);
+}
+
+.heroSection h3 {
+  font-size: 2.5rem;
+  font-size: clamp(0.5rem, 3vw + 1rem, 2.5rem);
+  font-weight: lighter;
+  margin: 0;
+}
+
+.heroSectionDarkMode h3 {
+  color: var(--dark-text-two);
+}
+
+.heroSectionLightMode h3 {
+  color: var(--light-text-two);
+}
+
+.heroSection p {
+  font-size: 1rem;
+  max-width: 50rem;
+}
+
+.heroSectionDarkMode p {
+  color: var(--dark-text-two);
+}
+
+.heroSectionLightMode p {
+  color: var(--light-text-two);
+}
+
+
+@media (max-width: 1080px) {
+  .heroSection {
+    grid-template-columns: 1fr;
+  }
+  .image {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 720px) {
+  .heroSection {
+    grid-template-columns: 1fr;
+  }
+  .image {
+    justify-self: center;
+  }
+  .heroSection img {
+    height: 17rem;
+  }
+  .heroSection {
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  
+}
