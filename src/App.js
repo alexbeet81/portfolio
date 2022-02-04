@@ -4,6 +4,7 @@ import DarkLightContext from './store/dark-light-context';
 
 import NavBar from './Components/UI/NavBar';
 import Hero from './Components/Hero';
+import About from './Components/About';
 
 function App() {
   const darkLightCtx = useContext(DarkLightContext);
@@ -17,6 +18,7 @@ function App() {
       <NavBar />
       <main className={classes.mainContainer}>
         <Hero />
+        <About />
       </main>
     </div>
   );
