@@ -1,12 +1,46 @@
-:root {
-  --navbar-background-dark: #283754;
-}
-
 .navbar {
+  position: relative;
+  display: flex;
+  justify-content: center;
   width: 100vw;
   height: 3.5rem;
+  overflow: hidden;
 }
 
 .navbarDark {
-  background-color: var(--bg-color-light);
+  background-color: var(--dark-bg-two);
+}
+
+.navbarDark a {
+  color: var(--dark-text-two);
+  border-bottom: 3px solid transparent;
+}
+
+.navbarDark a:hover {
+  border-bottom: 3px solid var(--dark-highlight);
+}
+
+.navbar a {
+  display: block;
+  font-family: 'Roboto';
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 1rem;
+  align-self: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbarItem:hover {
+  color: var(--dark-highlight);
+}
+
+.test {
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  margin-top: 0.5rem;
 }
