@@ -7,9 +7,30 @@
   overflow: auto;
 }
 
+.footerSection a {
+  text-decoration: none;
+}
+
+.footerSection h1,
+.footerSection h2 {
+  font-size: 1rem;
+}
+
+.footerSection h1 {
+  margin-bottom: 0;
+}
+
+.footerSection h2 {
+  font-weight: lighter;
+  margin-bottom: 5rem;
+}
+
 .footerDarkMode {
   background-color: var(--dark-bg-two);
+}
 
+.footerLightMode {
+  background-color: var(--light-bg-two);
 }
 
 .footerDarkMode h1,
@@ -18,9 +39,21 @@
 }
 
 .icons {
-  color: yellow;
   margin-top: 4rem;
   font-size: 2.5rem;
+}
+
+.icons a {
+  text-decoration: none;
+  margin: 0 0.25rem;
+}
+
+.darkModeIcons a {
+  color: var(--dark-highlight);
+}
+
+.lightModeIcons a {
+  color: var(--light-highlight);
 }
 
 .footerLightMode h1,
