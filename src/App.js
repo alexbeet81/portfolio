@@ -6,6 +6,7 @@ import NavBar from './Components/UI/NavBar';
 import Hero from './Components/Hero';
 import About from './Components/About';
 import Learning from './Components/Learning';
+import Footer from './Components/Footer';
 
 function App() {
   const darkLightCtx = useContext(DarkLightContext);
@@ -22,6 +23,7 @@ function App() {
         <About />
         <Learning />
       </main>
+      <Footer />
     </div>
   );
 }
