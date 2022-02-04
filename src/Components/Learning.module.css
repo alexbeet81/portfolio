@@ -4,6 +4,24 @@
   margin-top: 10rem;
 }
 
+.learningSection h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.learningSection h2 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.iconGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: center;
+}
+
 
 .learningDarkMode h1 {
   color: var(--dark-text-one);
@@ -22,6 +40,7 @@
 }
 
 .icon {
+  height: 4rem;
   font-size: 4rem;
 }
 
@@ -31,4 +50,17 @@
 
 .learningLightMode svg {
   color: var(--light-text-two);
+}
+
+
+@media (max-width: 1080px) {
+  .iconGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .iconGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
