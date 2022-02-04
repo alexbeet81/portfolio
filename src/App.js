@@ -1,18 +1,19 @@
 import classes from './App.module.css';
-import { useState } from 'react'; 
+import { useState, useContext } from 'react';
+import DarkLightContext from './store/dark-light-context';
+
+import NavBar from './Components/UI/NavBar';
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const darkLightCtx = useContext(DarkLightContext);
 
-  const darkModeHandler = () => {
-    setIsDarkMode((prevState) => !prevState)
-  }
+  const isDarkMode = darkLightCtx.isDarkMode;
 
   const backgroundClasses = isDarkMode ? classes.backgroundDark : classes.backgroundLight
 
   return (
     <div className={`${classes.background} ${backgroundClasses}`}>
-      <button onClick={darkModeHandler}>Click me</button>
+      <NavBar />
     </div>
   );
 }

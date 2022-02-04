@@ -1,0 +1,90 @@
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 3.5rem;
+  overflow: hidden;
+}
+
+.navbarDark {
+  background-color: var(--dark-bg-two);
+}
+
+.navbarDark a {
+  color: var(--dark-text-two);
+  border-bottom: 3px solid transparent;
+}
+
+.navbarDark a:hover {
+  border-bottom: 3px solid var(--dark-highlight);
+  color: var(--dark-highlight);
+}
+
+.navbarDark .darkLightModeIcon {
+  color: var(--dark-text-two);
+}
+
+.navbarLight {
+  background-color: var(--light-bg-two);
+}
+
+.navbarLight a {
+  color: var(--light-text-two);
+  border-bottom: 3px solid transparent;
+}
+
+.navbarLight a:hover {
+  border-bottom: 3px solid var(--light-highlight);
+  color: var(--light-highlight);
+}
+
+.navbar a {
+  display: block;
+  font-family: 'Roboto';
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 1rem;
+  align-self: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.darkLightModeIcon {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5rem;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  text-align: center;
+  margin: 0 0 0 1rem;
+  height: 3.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.iconDarkMode {
+  color: var(--dark-text-two);
+}
+
+.iconDarkMode:hover {
+  color: var(--dark-highlight)
+}
+
+.iconLightMode {
+  color: var(--light-text-two);
+}
+
+.iconLightMode:hover {
+  color: var(--light-highlight);
+}
+
+@media (max-width: 412px) {
+  .darkLightModeIcon {
+    font-size: 1rem;
+  }
+}
