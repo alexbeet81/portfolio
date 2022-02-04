@@ -21,6 +21,10 @@
   color: var(--dark-highlight);
 }
 
+.navbarDark .darkLightModeIcon {
+  color: var(--dark-text-two);
+}
+
 .navbarLight {
   background-color: var(--light-bg-two);
 }
@@ -48,7 +52,6 @@
 }
 
 .darkLightModeIcon {
-  color: var(--dark-text-two);
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -64,8 +67,20 @@
   transition: all 0.3s ease-in-out;
 }
 
-.darkLightModeIcon:hover {
+.iconDarkMode {
+  color: var(--dark-text-two);
+}
+
+.iconDarkMode:hover {
   color: var(--dark-highlight)
+}
+
+.iconLightMode {
+  color: var(--light-text-two);
+}
+
+.iconLightMode:hover {
+  color: var(--light-highlight);
 }
 
 @media (max-width: 412px) {
