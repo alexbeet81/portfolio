@@ -8,7 +8,7 @@
 }
 
 .aboutSection img {
-  height: 22rem;
+  height: 17rem;
 }
 
 .aboutSection h1 {
@@ -45,6 +45,6 @@
 
 @media (max-width: 720px) {
   .aboutSection img {
-    height: 17rem;
+    height: 14rem;
   }
 }
