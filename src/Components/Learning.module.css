@@ -1,0 +1,66 @@
+.learningSection {
+  margin: 0 auto;
+  max-width: 62.5rem;
+  margin-top: 10rem;
+}
+
+.learningSection h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.learningSection h2 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.iconGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: center;
+}
+
+
+.learningDarkMode h1 {
+  color: var(--dark-text-one);
+}
+
+.learningLightMode h1 {
+  color: var(--light-text-one);
+}
+
+.learningDarkMode h2 {
+  color: var(--dark-text-two);
+}
+
+.learningLightMode h2 {
+  color: var(--light-text-two);
+}
+
+.icon {
+  height: 4rem;
+  font-size: 4rem;
+}
+
+.learningDarkMode svg {
+  color: var(--dark-text-two);
+}
+
+.learningLightMode svg {
+  color: var(--light-text-two);
+}
+
+
+@media (max-width: 1080px) {
+  .iconGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .iconGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

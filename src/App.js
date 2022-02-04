@@ -5,6 +5,7 @@ import DarkLightContext from './store/dark-light-context';
 import NavBar from './Components/UI/NavBar';
 import Hero from './Components/Hero';
 import About from './Components/About';
+import Learning from './Components/Learning';
 
 function App() {
   const darkLightCtx = useContext(DarkLightContext);
@@ -19,6 +20,7 @@ function App() {
       <main className={classes.mainContainer}>
         <Hero />
         <About />
+        <Learning />
       </main>
     </div>
   );
