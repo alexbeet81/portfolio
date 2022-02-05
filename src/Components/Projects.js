@@ -6,6 +6,9 @@ const Projects = () => {
     <section className={classes.projectsSection}>
       <h1>A Few Projects I've Built</h1>
       <ProjectItem/>
+      <ProjectItem/>
+      <ProjectItem/>
+      <ProjectItem/>
     </section>
   )
 };
