@@ -11,7 +11,7 @@
 }
 
 .projectContainerLightMode {
-  background-color: rgba(241, 242, 208, 0.20);
+  background-color: rgba(241, 242, 208, 0.2);
 }
 
 .projectContainerDarkMode h2,
@@ -26,7 +26,20 @@
   color: var(--light-text-two);
 }
 
+.projectContentFooter {
+  display: flex;
+}
+
+.techUsedDark {
+  color: var(--dark-highlight);
+}
+
+.techUsedLight {
+  color: var(--light-highlight);
+}
+
 .projectContainer svg {
+  margin-left: 0.5rem;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
@@ -65,7 +78,7 @@
 
 .icons {
   font-size: 2rem;
-  margin-top: .25rem;
+  margin: 0.25rem 0 0 0;
 }
 
 @media (max-width: 720px) {

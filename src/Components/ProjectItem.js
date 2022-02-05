@@ -14,6 +14,10 @@ const ProjectItem = (props) => {
     ? classes.projectContainerDarkMode
     : classes.projectContainerLightMode;
 
+  const techUsedClasses = isDarkMode
+    ? classes.techUsedDark
+    : classes.techUsedLight;
+  
   return (
     <div className={`${classes.projectContainer} ${projectClasses}`}>
       <div className={classes.image}>
@@ -41,7 +45,11 @@ const ProjectItem = (props) => {
           consectetur adipiscing elit, sed do eiusmod tempor made using React,
           Node.js and Djungo
         </p>
-        <h3>Made using React and Firebase</h3>
+        <div className={classes.projectContentFooter}>
+          <p>
+            Made using <a className={techUsedClasses}>React and Firebase</a>
+          </p>
+        </div>
       </div>
     </div>
   );
