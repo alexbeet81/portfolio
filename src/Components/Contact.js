@@ -15,7 +15,7 @@ const Contact = () => {
   const buttonClasses = isDarkMode ? classes.buttonDark : classes.buttonLight;
 
   return (
-    <section className={`${classes.contactSection} ${contactClasses}`}>
+    <section id="contact" className={`${classes.contactSection} ${contactClasses}`}>
       <h1>Get In Contact</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
