@@ -20,6 +20,15 @@
   color: var(--dark-text-two);
 }
 
+.projectContainer svg {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.projectContainerLightMode svg:hover {
+  color: var(--light-highlight);
+}
+
 .projectContainerLightMode h2,
 .projectContainerLightMode p,
 .projectContainerLightMode svg {
