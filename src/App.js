@@ -6,6 +6,7 @@ import NavBar from './Components/UI/NavBar';
 import Hero from './Components/Hero';
 import About from './Components/About';
 import Learning from './Components/Learning';
+import Projects from './Components/Projects';
 import Footer from './Components/Footer';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Hero />
         <About />
         <Learning />
+        <Projects />
       </main>
       <Footer />
     </div>
