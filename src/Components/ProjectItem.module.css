@@ -1,0 +1,31 @@
+.projectContainer {
+  min-height: 20rem;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.projectContainer h1 {
+  color: black;
+}
+
+.image {
+  display: flex;
+  margin: 0.5rem;
+}
+
+.image img {
+  max-width: 29rem;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.titleAndIcons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons {
+
+}

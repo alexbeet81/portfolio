@@ -1,0 +1,9 @@
+.projectsSection {
+  margin: 15rem auto 25rem auto;
+  max-width: 62.5rem;
+}
+
+.projectsSection h1 {
+  color: white;
+  font-size: 2rem;
+}
