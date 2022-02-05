@@ -7,6 +7,7 @@ import Hero from './Components/Hero';
 import About from './Components/About';
 import Learning from './Components/Learning';
 import Projects from './Components/Projects';
+import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <About />
         <Learning />
         <Projects />
+        <Contact />
       </main>
       <Footer />
     </div>
