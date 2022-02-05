@@ -1,12 +1,26 @@
 .projectContainer {
   min-height: 20rem;
-  background-color: white;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.projectContainer h1 {
-  color: black;
+.projectContainerDarkMode {
+  /* background-color: rgba(40, 55, 84, 0.2); */
+  background-color: rgb(172, 60, 60);
+}
+
+.projectContainerLightMode {
+}
+
+.projectContainerDarkMode h2,
+.projectContainerDarkMode p,
+.projectContainerDarkMode svg {
+  color: var(--dark-text-two);
+}
+
+.projectContainer h2 {
+  font-size: 1.5rem;
+  font-weight: lighter;
 }
 
 .image {
@@ -21,11 +35,26 @@
   object-position: center;
 }
 
+.projectContent {
+  margin-left: 0.5rem;
+}
+
 .titleAndIcons {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .icons {
+  font-size: 2rem;
+}
 
+@media (max-width: 720px) {
+  .image {
+    display: none;
+  }
+  .projectContainer {
+    max-width: 22rem;
+    display: block;
+  }
 }
