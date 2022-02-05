@@ -4,8 +4,15 @@
 }
 
 .projectsSection h1 {
-  color: white;
   font-size: 2rem;
+}
+
+.projectsSectionDarkMode h1 {
+  color: var(--dark-text-one);
+}
+
+.projectsSectionLightMode h1 {
+  color: var(--light-bg-one);
 }
 
 @media (max-width: 720px) {

@@ -6,17 +6,24 @@
 }
 
 .projectContainerDarkMode {
-  /* background-color: rgba(40, 55, 84, 0.2); */
-  background-color: rgb(172, 60, 60);
+  background-color: rgba(40, 55, 84, 0.2);
+  /* background-color: rgb(172, 60, 60); */
 }
 
 .projectContainerLightMode {
+  background-color: rgba(241, 242, 208, 0.20);
 }
 
 .projectContainerDarkMode h2,
 .projectContainerDarkMode p,
 .projectContainerDarkMode svg {
   color: var(--dark-text-two);
+}
+
+.projectContainerLightMode h2,
+.projectContainerLightMode p,
+.projectContainerLightMode svg {
+  color: var(--light-text-two);
 }
 
 .projectContainer h2 {
