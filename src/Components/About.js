@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 
 import profilePhoto from '../images/profile-photo.png';
 import DarkLightContext from "../store/dark-light-context";
@@ -15,7 +15,7 @@ const About = () => {
 
   return (
     <section className={`${classes.aboutSection} ${aboutSectionClasses}`}>
-      <div className={classes.image}>
+      <div id="work" className={classes.image}>
         <img src={profilePhoto} alt="profile photo"/>
       </div>
       <div>

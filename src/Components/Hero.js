@@ -13,7 +13,7 @@ const Hero = () => {
   const heroSectionClasses = isDarkMode ? classes.heroSectionDarkMode : classes.heroSectionLightMode;
 
   return (
-    <section className={`${classes.heroSection} ${heroSectionClasses}`}>
+    <section id="home" className={`${classes.heroSection} ${heroSectionClasses}`}>
       <div>
         <h1>Hello, I'm</h1>
         <h2>Alex Pritchard</h2>
