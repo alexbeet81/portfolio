@@ -63,6 +63,7 @@ const Projects = () => {
   const projectList = PROJECTS.map(project => {
     return(
       <ProjectItem 
+        key={project.id}
         id={project.id}
         title={project.title}
         image={project.image}

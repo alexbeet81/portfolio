@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 
 import profilePhoto from '../images/profile-photo.png';
 import DarkLightContext from "../store/dark-light-context";
@@ -14,8 +14,8 @@ const About = () => {
     : classes.aboutSectionLightMode;
 
   return (
-    <section id="work" className={`${classes.aboutSection} ${aboutSectionClasses}`}>
-      <div className={classes.image}>
+    <section className={`${classes.aboutSection} ${aboutSectionClasses}`}>
+      <div id="work" className={classes.image}>
         <img src={profilePhoto} alt="profile photo"/>
       </div>
       <div>
