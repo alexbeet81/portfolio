@@ -39,7 +39,13 @@
   color: var(--light-text-two);
 }
 
+.iconItem {
+  display: flex;
+  flex-direction: column;
+}
+
 .icon {
+  margin: auto;
   height: 4rem;
   font-size: 4rem;
 }
