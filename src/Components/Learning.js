@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaNodeJs } from "react-icons/fa";
+import { SiJavascript, SiRubyonrails, SiRuby, SiCss3 } from "react-icons/si";
 
 import DarkLightContext from "../store/dark-light-context";
 import classes from "./Learning.module.css";
@@ -19,9 +20,9 @@ const Learning = () => {
       <div className={classes.iconGrid}>
         <div className={classes.iconItem}>
           <div className={classes.icon}>
-            <FaReact />
+            <SiJavascript />
           </div>
-          <h2>React</h2>
+          <h2>JavaScript (ES6)</h2>
         </div>
         <div className={classes.iconItem}>
           <div className={classes.icon}>
@@ -31,27 +32,27 @@ const Learning = () => {
         </div>
         <div className={classes.iconItem}>
           <div className={classes.icon}>
-            <FaReact />
+            <FaNodeJs />
           </div>
-          <h2>React</h2>
+          <h2>Node.js</h2>
         </div>
         <div className={classes.iconItem}>
           <div className={classes.icon}>
-            <FaReact />
+            <SiRuby />
           </div>
-          <h2>React</h2>
+          <h2>Ruby</h2>
         </div>
         <div className={classes.iconItem}>
           <div className={classes.icon}>
-            <FaReact />
+            <SiRubyonrails />
           </div>
-          <h2>React</h2>
+          <h2>Ruby On Rails</h2>
         </div>
         <div className={classes.iconItem}>
           <div className={classes.icon}>
-            <FaReact />
+            <SiCss3 />
           </div>
-          <h2>React</h2>
+          <h2>CSS</h2>
         </div>
       </div>
     </section>
