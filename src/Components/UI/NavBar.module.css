@@ -21,9 +21,9 @@
   color: var(--dark-highlight);
 }
 
-.navbarDark .darkLightModeIcon {
+/* .navbarDark .darkLightModeIcon {
   color: var(--dark-text-two);
-}
+} */
 
 .navbarLight {
   background-color: var(--light-bg-two);
@@ -40,7 +40,7 @@
 }
 
 .navbar a {
-  display: block;
+  /* display: block; */
   font-family: 'Roboto';
   text-decoration: none;
   font-size: 1rem;
@@ -52,7 +52,7 @@
 }
 
 .darkLightModeIcon {
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   flex-direction: column;
   justify-content: center;
