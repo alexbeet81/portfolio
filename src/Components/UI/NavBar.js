@@ -29,23 +29,31 @@ const NavBar = () => {
 
   return (
     <Fragment>
-      <div
-        onClick={darkLightIconHandler}
-        className={`${classes.darkLightModeIcon} ${iconDarkLightClasses}`}
-      >
-        {darkModeToggleIcon}
-      </div>
       <div className={`${classes.navbar} ${navBarDarkLightClasses}`}>
-        <Link to="home" spy={true} smooth={false} offset={50} duration={500}>
-          Home
-        </Link>
-        <Link to="work" spy={true} smooth={true} offset={50} duration={500}>
-          Work
-        </Link>
-        <Link to="contact" spy={true} smooth={true} offset={50} duration={500}>
-          Contact
-        </Link>
-        <a href="#resume">Resume</a>
+        <div
+          onClick={darkLightIconHandler}
+          className={`${classes.darkLightModeIcon} ${iconDarkLightClasses}`}
+        >
+          {darkModeToggleIcon}
+        </div>
+        <div className={classes.navLinks}>
+          <Link to="home" spy={true} smooth={false} offset={50} duration={500}>
+            Home
+          </Link>
+          <Link to="work" spy={true} smooth={true} offset={50} duration={500}>
+            Work
+          </Link>
+          <Link
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            Contact
+          </Link>
+          <a href="#resume">Resume</a>
+        </div>
       </div>
     </Fragment>
   );
