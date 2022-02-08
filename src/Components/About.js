@@ -16,7 +16,7 @@ const About = () => {
   return (
     <section className={`${classes.aboutSection} ${aboutSectionClasses}`}>
       <div id="work" className={classes.image}>
-        <img src={profilePhoto} alt="profile photo" />
+        <img src={profilePhoto} alt="My big old beautiful face" />
       </div>
       <div>
         <h1>About Me</h1>
@@ -37,7 +37,7 @@ const About = () => {
         <p>
           I am based in Beijing but will move home to the UK this July, where I
           shall be eagerly looking for opportunities. Please,{" "}
-          <a href="mailto:alexbeet1234@gmail.com" target="_blank">
+          <a href="mailto:alexbeet1234@gmail.com" target="_blank" rel="noopener noreferrer">
             {" "}
             get in touch
           </a>{" "}

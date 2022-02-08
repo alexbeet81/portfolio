@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 
 import classes from "./Hero.module.css";
 import heroDark from "../images/hero-dark.png";
@@ -31,14 +31,14 @@ const Hero = () => {
         </p>
         <p>
           I recently completed a 24-Week remote full stack bootcamp with{" "}
-          <a href="https://www.lewagon.com" target="_blank">
+          <a href="https://www.lewagon.com" target="_blank" rel="noopener noreferrer">
             {" "}
             LeWagon
           </a>
         </p>
       </div>
       <div className={classes.image}>
-        <img src={heroImg} alt="hero-image"></img>
+        <img src={heroImg} alt="hero"></img>
       </div>
     </section>
   );
