@@ -17,14 +17,13 @@ const ProjectItem = (props) => {
   const techUsedClasses = isDarkMode
     ? classes.techUsedDark
     : classes.techUsedLight;
-  
+
   return (
     <div className={`${classes.projectContainer} ${projectClasses}`}>
       <div className={classes.image}>
-        <img
-          src={props.image}
-          alt={`screenshot of ${props.title}`}
-        />
+        <a href={`${props.projectLink}`} target="_blank">
+          <img src={props.image} alt={`Screenshot of ${props.title}`} />
+        </a>
       </div>
       <div className={classes.projectContent}>
         <div className={classes.titleAndIcons}>
@@ -38,9 +37,7 @@ const ProjectItem = (props) => {
             </a>
           </div>
         </div>
-        <p>
-          {props.description}
-        </p>
+        <p>{props.description}</p>
         <div className={classes.projectContentFooter}>
           <p>
             Made using <a className={techUsedClasses}>{props.tech}</a>

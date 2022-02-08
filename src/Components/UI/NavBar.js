@@ -3,6 +3,7 @@ import { Fragment } from "react/cjs/react.production.min";
 import { MdDarkMode } from "react-icons/md";
 import { BsSunFill } from "react-icons/bs";
 import { Link } from "react-scroll";
+import Resume from '../../resume/resume.pdf';
 
 import DarkLightContext from "../../store/dark-light-context";
 import classes from "./NavBar.module.css";
@@ -52,7 +53,7 @@ const NavBar = () => {
           >
             Contact
           </Link>
-          <a href="#resume">Resume</a>
+          <a href={Resume} target="_blank">Resume</a>
         </div>
       </div>
     </Fragment>

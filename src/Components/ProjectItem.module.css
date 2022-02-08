@@ -59,11 +59,21 @@
   margin: 0.5rem;
 }
 
+.image a {
+  display: flex;
+}
+
 .image img {
   max-width: 29rem;
   width: 100%;
   object-fit: cover;
   object-position: center;
+  opacity: 0.6;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.image img:hover {
+  opacity: 1;
 }
 
 .projectContent {
