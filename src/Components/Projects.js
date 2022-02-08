@@ -3,6 +3,7 @@ import { useContext } from "react";
 import BeetBlogImage from "../images/beetblog.png";
 import Classicar from "../images/classicar.png";
 import CheckItOff from "../images/checkitoff.png";
+import Freeme from "../images/freeme.png";
 import DarkLightContext from "../store/dark-light-context";
 import ProjectItem from "./ProjectItem";
 import classes from "./Projects.module.css";
@@ -11,13 +12,12 @@ const PROJECTS = [
   {
     id: "p1",
     title: "Free Me",
-    image:
-      "https://images.unsplash.com/photo-1643960987290-37971bf5f2bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+    image: Freeme,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor made using React, Node.js and Djungo",
-    tech: "React and Firebase",
-    projectLink: "#",
-    gitRepo: "https://github.com/alexbeet81/beet-blog",
+      "The final project from my 24-week part-time boot camp at Le Wagon. The idea behind the project was to make a portfolio creation app targeted at software developers. Users can quickly and easily set up a portfolio of their work to send to potential clients or employers. I was in charge of the back-end and managing the git-hub repo. I also helped in the creation of the front end.",
+    tech: "Ruby, Ruby on Rails and Heroku",
+    projectLink: "https://freemedom.herokuapp.com/",
+    gitRepo: "https://github.com/alexbeet81/freeme",
   },
   {
     id: "p2",
@@ -27,7 +27,7 @@ const PROJECTS = [
       "After sinking many hours into tutorials on React, I decided to put to use what I had learned and created a simple blog post site. My aims were to build a simple multi-page SPA with React Router; have persistent login; create forms with validation feedback and use a custom hook for api-calls.",
     tech: "React and Firebase",
     projectLink: "https://beet-blog.web.app/",
-    gitRepo: "https://github.com/alexbeet81",
+    gitRepo: "https://github.com/alexbeet81/beet-blog",
   },
   {
     id: "p3",
