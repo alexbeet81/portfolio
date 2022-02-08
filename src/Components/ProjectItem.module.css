@@ -59,6 +59,10 @@
   margin: 0.5rem;
 }
 
+.image a {
+  display: flex;
+}
+
 .image img {
   max-width: 29rem;
   width: 100%;
