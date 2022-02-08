@@ -1,5 +1,5 @@
 .contactSection {
-  margin: 10rem auto 25rem auto;
+  margin: 10rem auto 20rem auto;
   max-width: 62.5rem;
 }
 
@@ -26,9 +26,24 @@
   border-radius: 0.25rem;
   font-weight: bold;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-top: 1rem;
 }
 
 .buttonDark {
   background-color: var(--dark-highlight);
   color: var(--dark-bg-one);
+}
+
+.buttonDark:hover {
+  background-color: var(--dark-highlight-hover);
+}
+
+.buttonLight {
+  background-color: var(--light-highlight);
+  color: var(--light-bg-one);
+}
+
+.buttonLight:hover {
+  background-color: var(--light-highligh-hover);
 }

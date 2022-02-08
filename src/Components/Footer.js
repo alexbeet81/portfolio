@@ -25,15 +25,17 @@ const Footer = () => {
         <a href="https://github.com/alexbeet81" target="_blank">
           <AiFillGithub />
         </a>
-        <a href="#">
+        <a href="https://www.linkedin.com/in/alexpritchard1/" target="_blank">
           <AiFillLinkedin />
         </a>
-        <a href="#">
+        <a href="https://twitter.com/AlexBeet4" target="_blank">
           <AiFillTwitterCircle />
         </a>
       </div>
-      <h1>alexbeet1234@gmail.com</h1>
-      <a href="#">
+      <a href="mailto:alexbeet1234@gmail.com" target="_blank">
+        <h1>alexbeet1234@gmail.com</h1>
+      </a>
+      <a href="https://github.com/alexbeet81/portfolio" target="_blank">
         <h2>Made by Alex Pritchard</h2>
       </a>
     </section>

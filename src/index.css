@@ -4,11 +4,13 @@
   --dark-text-one: #ffffff;
   --dark-text-two: #d0e2f9;
   --dark-highlight: #e5dd52;
+  --dark-highlight-hover: #cac53f;
   --light-bg-one: #ffffff;
   --light-bg-two: #f1f2d0;
   --light-text-one: #03293a;
   --light-text-two: #23656d;
   --light-highlight: #f42b1b;
+  --light-highligh-hover: #da2203;
 }
 
 body {
