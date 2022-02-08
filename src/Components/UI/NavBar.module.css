@@ -5,6 +5,7 @@
   width: 100vw;
   height: 3.5rem;
   overflow: hidden;
+  z-index: 10;
 }
 .navLinks {
   align-self: center;
