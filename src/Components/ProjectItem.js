@@ -1,6 +1,6 @@
 import { AiFillGithub } from "react-icons/ai";
 import { BiLinkExternal } from "react-icons/bi";
-import { useContext } from "react";
+import React, { useContext } from "react";
 
 import classes from "./ProjectItem.module.css";
 import DarkLightContext from "../store/dark-light-context";
@@ -21,7 +21,7 @@ const ProjectItem = (props) => {
   return (
     <div className={`${classes.projectContainer} ${projectClasses}`}>
       <div className={classes.image}>
-        <a href={`${props.projectLink}`} target="_blank">
+        <a href={`${props.projectLink}`} target="_blank" rel="noopener noreferrer">
           <img src={props.image} alt={`Screenshot of ${props.title}`} />
         </a>
       </div>
@@ -29,10 +29,10 @@ const ProjectItem = (props) => {
         <div className={classes.titleAndIcons}>
           <h2>{props.title}</h2>
           <div className={classes.icons}>
-            <a href={props.projectLink} target="_blank">
+            <a href={props.projectLink} target="_blank" rel="noopener noreferrer">
               <BiLinkExternal />
             </a>
-            <a href={props.gitRepo} target="_blank">
+            <a href={props.gitRepo} target="_blank" rel="noopener noreferrer">
               <AiFillGithub />
             </a>
           </div>

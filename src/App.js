@@ -1,5 +1,5 @@
 import classes from './App.module.css';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import DarkLightContext from './store/dark-light-context';
 
 import NavBar from './Components/UI/NavBar';

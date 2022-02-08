@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 
 import BeetBlogImage from "../images/beetblog.png";
 import Classicar from "../images/classicar.png";
@@ -76,7 +76,7 @@ const Projects = () => {
   });
 
   return (
-    <section className={`${classes.projectsSection} ${projectSectionClasses}`}>
+    <section id="work" name="work" className={`${classes.projectsSection} ${projectSectionClasses}`}>
       <h1>A Few Projects I've Built</h1>
       {projectList}
     </section>

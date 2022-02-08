@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiJavascript, SiRubyonrails, SiRuby, SiCss3 } from "react-icons/si";
 
