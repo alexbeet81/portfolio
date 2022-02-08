@@ -15,7 +15,10 @@ const Contact = () => {
   const buttonClasses = isDarkMode ? classes.buttonDark : classes.buttonLight;
 
   return (
-    <section id="contact" className={`${classes.contactSection} ${contactClasses}`}>
+    <section
+      id="contact"
+      className={`${classes.contactSection} ${contactClasses}`}
+    >
       <h1>Get In Contact</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -25,7 +28,11 @@ const Contact = () => {
         et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
         exercitation
       </p>
-      <button type="button" className={`${classes.button} ${buttonClasses}`}>message me</button>
+      <a href="mailto:alexbeet1234@gmail.com">
+        <button type="button" className={`${classes.button} ${buttonClasses}`}>
+          message me
+        </button>
+      </a>
     </section>
   );
 };

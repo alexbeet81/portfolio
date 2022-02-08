@@ -26,9 +26,23 @@
   border-radius: 0.25rem;
   font-weight: bold;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 .buttonDark {
   background-color: var(--dark-highlight);
   color: var(--dark-bg-one);
+}
+
+.buttonDark:hover {
+  background-color: rgb(202, 196, 75);
+}
+
+.buttonLight {
+  background-color: var(--light-highlight);
+  color: var(--light-bg-one);
+}
+
+.buttonLight:hover {
+  background-color: rgb(216, 37, 24);
 }

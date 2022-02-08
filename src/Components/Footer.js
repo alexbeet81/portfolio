@@ -32,7 +32,9 @@ const Footer = () => {
           <AiFillTwitterCircle />
         </a>
       </div>
-      <h1>alexbeet1234@gmail.com</h1>
+      <a href="mailto:alexbeet1234@gmail.com">
+        <h1>alexbeet1234@gmail.com</h1>
+      </a>
       <a href="#">
         <h2>Made by Alex Pritchard</h2>
       </a>
