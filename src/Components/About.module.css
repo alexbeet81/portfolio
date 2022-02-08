@@ -1,5 +1,5 @@
 .aboutSection {
-  margin: 0 auto;
+  margin: 15rem auto 5rem auto;
   max-width: 62.5rem;
   display: grid;
   grid-gap: 1rem;
@@ -16,6 +16,10 @@
   margin-top: 0;
 }
 
+.aboutSection a {
+  text-decoration: none;
+}
+
 .aboutSectionDarkMode h1 {
   color: var(--dark-text-one);
 }
@@ -30,6 +34,14 @@
 
 .aboutSectionLightMode p {
   color: var(--light-text-two);
+}
+
+.aboutSectionDarkMode a {
+  color: var(--dark-highlight);
+}
+
+.aboutSectionLightMode a {
+  color: var(--light-highlight);
 }
 
 @media (max-width: 1080px) {
