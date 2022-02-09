@@ -86,6 +86,11 @@
 }
 
 @media (max-width: 412px) {
+  .navbar a {
+    /* font-size: 0.75rem; */
+    padding: 1rem 0.5rem;
+  }
+
   .darkLightModeIcon {
     font-size: 1rem;
   }
