@@ -43,17 +43,27 @@ const NavBar = () => {
             name="home"
             spy={true}
             smooth={true}
-            // offset={50}
+            offset={50}
             duration={500}
           >
             Home
+          </Link>
+          <Link
+            to="about"
+            name="about"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            About
           </Link>
           <Link
             to="work"
             name="work"
             spy={true}
             smooth={true}
-            // offset={50}
+            offset={-100}
             duration={500}
           >
             Work
@@ -62,7 +72,7 @@ const NavBar = () => {
             to="contact"
             spy={true}
             smooth={true}
-            // offset={50}
+            offset={0}
             duration={500}
           >
             Contact
