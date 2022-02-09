@@ -14,7 +14,7 @@
 .footerSection h1,
 .footerSection h2 {
   font-size: 1rem;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .footerSection h1 {
@@ -52,7 +52,7 @@
 .icons a {
   text-decoration: none;
   margin: 0 0.25rem;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .darkModeIcons a {
