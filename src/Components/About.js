@@ -14,8 +14,8 @@ const About = () => {
     : classes.aboutSectionLightMode;
 
   return (
-    <section className={`${classes.aboutSection} ${aboutSectionClasses}`}>
-      <div id="work" className={classes.image}>
+    <section id="about" className={`${classes.aboutSection} ${aboutSectionClasses}`}>
+      <div className={classes.image}>
         <img src={profilePhoto} alt="My big old beautiful face" />
       </div>
       <div>

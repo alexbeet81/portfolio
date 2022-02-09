@@ -18,7 +18,7 @@ function App() {
   const backgroundClasses = isDarkMode ? classes.backgroundDark : classes.backgroundLight
 
   return (
-    <div className={`${classes.background} ${backgroundClasses}`}>
+    <div className={backgroundClasses}>
       <NavBar />
       <main className={classes.mainContainer}>
         <Hero />

@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import { Fragment } from "react/cjs/react.production.min";
 import { MdDarkMode } from "react-icons/md";
 import { BsSunFill } from "react-icons/bs";
-import Resume from '../../resume/resume.pdf';
+import Resume from "../../resume/resume.pdf";
 
 import DarkLightContext from "../../store/dark-light-context";
 import classes from "./NavBar.module.css";
@@ -38,22 +38,48 @@ const NavBar = () => {
           {darkModeToggleIcon}
         </div>
         <div className={classes.navLinks}>
-          <Link to="home" name="home" spy={true} smooth={false} offset={50} duration={500}>
+          <Link
+            to="home"
+            name="home"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
             Home
           </Link>
-          <Link to="work" name="work" spy={true} smooth={true} offset={50} duration={500}>
+          <Link
+            to="about"
+            name="about"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            About
+          </Link>
+          <Link
+            to="work"
+            name="work"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
             Work
           </Link>
           <Link
             to="contact"
             spy={true}
             smooth={true}
-            offset={50}
+            offset={-100}
             duration={500}
           >
             Contact
           </Link>
-          <a href={Resume} target="_blank" rel="noopener noreferrer">Resume</a>
+          <a href={Resume} target="_blank" rel="noopener noreferrer">
+            Resume
+          </a>
         </div>
       </div>
     </Fragment>
