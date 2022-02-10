@@ -2,6 +2,7 @@ import classes from "./App.module.css";
 import React, { useContext } from "react";
 import DarkLightContext from "./store/dark-light-context";
 
+import Intro from "./Components/Intro";
 import NavBar from "./Components/UI/NavBar";
 import Hero from "./Components/Hero";
 import About from "./Components/About";
@@ -18,6 +19,10 @@ function App() {
   const backgroundClasses = isDarkMode
     ? classes.backgroundDark
     : classes.backgroundLight;
+
+  const introComponent = (
+    <Intro />
+  )
 
   const mainComponent = (
     <div>
@@ -36,7 +41,7 @@ function App() {
 
   return (
     <div className={backgroundClasses}>
-      {mainComponent}
+      {introComponent}
     </div>
   );
 }
