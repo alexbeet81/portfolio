@@ -24,10 +24,10 @@ const Hero = () => {
       className={`${classes.heroSection} ${heroSectionClasses}`}
     >
       <div>
-        <h1 data-aos="fade-up" data-aos-duration="1000">
+        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
           Hello, I'm
         </h1>
-        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+        <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50" data-aos-once="true">
           Alex Pritchard
         </h2>
         <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">

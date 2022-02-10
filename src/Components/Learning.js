@@ -19,52 +19,51 @@ const Learning = () => {
     : classes.learningLightMode;
 
   return (
-    <section
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      data-aos-once="true"
-      className={`${classes.learningSection} ${learningSectionClasses}`}
-    >
-      <h1>What I've Been Learning</h1>
-      <div className={classes.iconGrid}>
-        <div className={classes.iconItem}>
-          <div className={classes.icon}>
-            <SiJavascript />
+    <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+      <section
+        className={`${classes.learningSection} ${learningSectionClasses}`}
+      >
+        <h1>What I've Been Learning</h1>
+        <div className={classes.iconGrid}>
+          <div className={classes.iconItem}>
+            <div className={classes.icon}>
+              <SiJavascript />
+            </div>
+            <h2>JavaScript (ES6)</h2>
           </div>
-          <h2>JavaScript (ES6)</h2>
-        </div>
-        <div className={classes.iconItem}>
-          <div className={classes.icon}>
-            <FaReact />
+          <div className={classes.iconItem}>
+            <div className={classes.icon}>
+              <FaReact />
+            </div>
+            <h2>React</h2>
           </div>
-          <h2>React</h2>
-        </div>
-        <div className={classes.iconItem}>
-          <div className={classes.icon}>
-            <FaNodeJs />
+          <div className={classes.iconItem}>
+            <div className={classes.icon}>
+              <FaNodeJs />
+            </div>
+            <h2>Node.js</h2>
           </div>
-          <h2>Node.js</h2>
-        </div>
-        <div className={classes.iconItem}>
-          <div className={classes.icon}>
-            <SiRuby />
+          <div className={classes.iconItem}>
+            <div className={classes.icon}>
+              <SiRuby />
+            </div>
+            <h2>Ruby</h2>
           </div>
-          <h2>Ruby</h2>
-        </div>
-        <div className={classes.iconItem}>
-          <div className={classes.icon}>
-            <SiRubyonrails />
+          <div className={classes.iconItem}>
+            <div className={classes.icon}>
+              <SiRubyonrails />
+            </div>
+            <h2>Ruby On Rails</h2>
           </div>
-          <h2>Ruby On Rails</h2>
-        </div>
-        <div className={classes.iconItem}>
-          <div className={classes.icon}>
-            <SiCss3 />
+          <div className={classes.iconItem}>
+            <div className={classes.icon}>
+              <SiCss3 />
+            </div>
+            <h2>CSS</h2>
           </div>
-          <h2>CSS</h2>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

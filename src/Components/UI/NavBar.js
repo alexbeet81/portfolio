@@ -11,7 +11,9 @@ import DarkLightContext from "../../store/dark-light-context";
 import classes from "./NavBar.module.css";
 
 const NavBar = () => {
-  AOS.init();
+  AOS.init({
+    once: true
+  });
 
   const darkLightCtx = useContext(DarkLightContext);
 
