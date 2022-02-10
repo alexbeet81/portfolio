@@ -18,18 +18,18 @@ const reducer = (state, action) => {
 function App() {
   const [state, dispatch] = useReducer(reducer, { animationIsFinished: false });
 
-  const darkLightCtx = useContext(DarkLightContext);
-
-  const isDarkMode = darkLightCtx.isDarkMode;
 
   useEffect(() => {
+    console.log('USE EFFECT RUNNING')
     const timer = setTimeout(() => {
-      console.log("time out");
       dispatch();
     }, 3000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [dispatch]);
+
+  const darkLightCtx = useContext(DarkLightContext);
+  const isDarkMode = darkLightCtx.isDarkMode;
 
   const backgroundClasses = isDarkMode
     ? classes.backgroundDark
