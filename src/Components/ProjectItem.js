@@ -8,7 +8,7 @@ import DarkLightContext from "../store/dark-light-context";
 
 const ProjectItem = (props) => {
   AOS.init();
-  
+
   const darkLightCtx = useContext(DarkLightContext);
 
   const isDarkMode = darkLightCtx.isDarkMode;
@@ -22,42 +22,39 @@ const ProjectItem = (props) => {
     : classes.techUsedLight;
 
   return (
-    <div
-      data-aos="zoom-in"
-      data-aos-duration="1000"
-      data-aos-once="true"
-      className={`${classes.projectContainer} ${projectClasses}`}
-    >
-      <div className={classes.image}>
-        <a
-          href={`${props.projectLink}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={props.image} alt={`Screenshot of ${props.title}`} />
-        </a>
-      </div>
-      <div className={classes.projectContent}>
-        <div className={classes.titleAndIcons}>
-          <h2>{props.title}</h2>
-          <div className={classes.icons}>
-            <a
-              href={props.projectLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <BiLinkExternal />
-            </a>
-            <a href={props.gitRepo} target="_blank" rel="noopener noreferrer">
-              <AiFillGithub />
-            </a>
-          </div>
+    <div data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">
+      <div className={`${classes.projectContainer} ${projectClasses}`}>
+        <div className={classes.image}>
+          <a
+            href={`${props.projectLink}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={props.image} alt={`Screenshot of ${props.title}`} />
+          </a>
         </div>
-        <p>{props.description}</p>
-        <div className={classes.projectContentFooter}>
-          <p>
-            Made using <a className={techUsedClasses}>{props.tech}</a>
-          </p>
+        <div className={classes.projectContent}>
+          <div className={classes.titleAndIcons}>
+            <h2>{props.title}</h2>
+            <div className={classes.icons}>
+              <a
+                href={props.projectLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BiLinkExternal />
+              </a>
+              <a href={props.gitRepo} target="_blank" rel="noopener noreferrer">
+                <AiFillGithub />
+              </a>
+            </div>
+          </div>
+          <p>{props.description}</p>
+          <div className={classes.projectContentFooter}>
+            <p>
+              Made using <a className={techUsedClasses}>{props.tech}</a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
