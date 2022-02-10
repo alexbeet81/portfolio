@@ -1,14 +1,18 @@
 import React, { useContext } from "react";
 import { Link } from "react-scroll";
-import { Fragment } from "react/cjs/react.production.min";
 import { MdDarkMode } from "react-icons/md";
 import { BsSunFill } from "react-icons/bs";
-import Resume from "../../resume/resume.pdf";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
+
+import Resume from "../../resume/resume.pdf";
 import DarkLightContext from "../../store/dark-light-context";
 import classes from "./NavBar.module.css";
 
 const NavBar = () => {
+  AOS.init();
+
   const darkLightCtx = useContext(DarkLightContext);
 
   const isDarkMode = darkLightCtx.isDarkMode;
@@ -29,7 +33,7 @@ const NavBar = () => {
   const darkModeToggleIcon = isDarkMode ? <BsSunFill /> : <MdDarkMode />;
 
   return (
-    <Fragment>
+    <section data-aos="fade-down" data-aos-duration="500" >
       <div className={`${classes.navbar} ${navBarDarkLightClasses}`}>
         <div
           onClick={darkLightIconHandler}
@@ -82,7 +86,7 @@ const NavBar = () => {
           </a>
         </div>
       </div>
-    </Fragment>
+    </section>
   );
 };
 

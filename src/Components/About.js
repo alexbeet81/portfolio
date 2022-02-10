@@ -1,10 +1,14 @@
 import React, { useContext } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import profilePhoto from "../images/profile-photo.png";
 import DarkLightContext from "../store/dark-light-context";
 import classes from "./About.module.css";
 
 const About = () => {
+  AOS.init();
+
   const darkLightCtx = useContext(DarkLightContext);
 
   const isDarkMode = darkLightCtx.isDarkMode;
@@ -14,7 +18,13 @@ const About = () => {
     : classes.aboutSectionLightMode;
 
   return (
-    <section id="about" className={`${classes.aboutSection} ${aboutSectionClasses}`}>
+    <section
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-once="true"
+      id="about"
+      className={`${classes.aboutSection} ${aboutSectionClasses}`}
+    >
       <div className={classes.image}>
         <img src={profilePhoto} alt="My big old beautiful face" />
       </div>
@@ -37,7 +47,11 @@ const About = () => {
         <p>
           I am based in Beijing but will move home to the UK this July, where I
           shall be eagerly looking for opportunities. Please,{" "}
-          <a href="mailto:alexbeet1234@gmail.com" target="_blank" rel="noopener noreferrer">
+          <a
+            href="mailto:alexbeet1234@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {" "}
             get in touch
           </a>{" "}

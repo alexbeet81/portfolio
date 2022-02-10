@@ -1,4 +1,6 @@
 import React, { useContext } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import BeetBlogImage from "../images/beetblog.png";
 import Classicar from "../images/classicar.png";
@@ -52,6 +54,8 @@ const PROJECTS = [
 ];
 
 const Projects = () => {
+  AOS.init();
+
   const darkLightCtx = useContext(DarkLightContext);
 
   const isDarkMode = darkLightCtx.isDarkMode;
@@ -76,8 +80,14 @@ const Projects = () => {
   });
 
   return (
-    <section id="work" name="work" className={`${classes.projectsSection} ${projectSectionClasses}`}>
-      <h1>A Few Projects I've Built</h1>
+    <section
+      id="work"
+      name="work"
+      className={`${classes.projectsSection} ${projectSectionClasses}`}
+    >
+      <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+        A Few Projects I've Built
+      </h1>
       {projectList}
     </section>
   );
