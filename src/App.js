@@ -1,24 +1,42 @@
-import classes from './App.module.css';
-import React, { useContext } from 'react';
-import DarkLightContext from './store/dark-light-context';
+import classes from "./App.module.css";
+import React, { useContext, useEffect, useReducer } from "react";
+import DarkLightContext from "./store/dark-light-context";
 
-import NavBar from './Components/UI/NavBar';
-import Hero from './Components/Hero';
-import About from './Components/About';
-import Learning from './Components/Learning';
-import Projects from './Components/Projects';
-import Contact from './Components/Contact';
-import Footer from './Components/Footer';
+import Intro from "./Components/Intro";
+import NavBar from "./Components/UI/NavBar";
+import Hero from "./Components/Hero";
+import About from "./Components/About";
+import Learning from "./Components/Learning";
+import Projects from "./Components/Projects";
+import Contact from "./Components/Contact";
+import Footer from "./Components/Footer";
+
+const reducer = (state, action) => {
+  return { animationIsFinished: true };
+};
 
 function App() {
-  const darkLightCtx = useContext(DarkLightContext);
+  const [state, dispatch] = useReducer(reducer, { animationIsFinished: false });
 
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      dispatch();
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, [dispatch]);
+
+  const darkLightCtx = useContext(DarkLightContext);
   const isDarkMode = darkLightCtx.isDarkMode;
 
-  const backgroundClasses = isDarkMode ? classes.backgroundDark : classes.backgroundLight
+  const backgroundClasses = isDarkMode
+    ? classes.backgroundDark
+    : classes.backgroundLight;
 
-  return (
-    <div className={backgroundClasses}>
+  const mainComponent = state.animationIsFinished ? (
+    <div>
+      {" "}
       <NavBar />
       <main className={classes.mainContainer}>
         <Hero />
@@ -29,7 +47,12 @@ function App() {
       </main>
       <Footer />
     </div>
+  ) : (
+    <Intro />
   );
+
+  
+  return <div className={backgroundClasses}>{mainComponent}</div>;
 }
 
 export default App;
