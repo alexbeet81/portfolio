@@ -22,19 +22,8 @@
   animation-fill-mode: forwards;
 }
 
-
-/* .circle {
-  transform-origin: center;
-  transform: rotate(270deg);
-  stroke-dasharray: 490;
-  stroke-dashoffset: 490;
-  animation: dash .8s ease-in;
-  animation-fill-mode: forwards;
-} */
-
 .path {
   transform-origin: center;
-  /* transform: rotate(270deg); */
   stroke-dasharray: 685;
   stroke-dashoffset: 685;
   opacity: 0;

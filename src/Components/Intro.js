@@ -9,22 +9,6 @@ const Intro = () => {
     <div className={classes.introContainer}>
       <div className={classes.imageContainer}>
         <img src={HeroDark} alt="man typing on computer" />
-        {/* <svg
-          width="160"
-          height="160"
-          viewBox="0 0 160 160"
-          fill="none"
-          preserveAspectRatio="xMidYMax meet"
-        >
-          <circle
-            className={classes.circle}
-            cx="80"
-            cy="80"
-            r="78"
-            stroke="#E5DD52"
-            stroke-width="4"
-          />
-        </svg> */}
         <svg
           id="path"
           className={classes.path}
