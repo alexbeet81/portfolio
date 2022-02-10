@@ -17,7 +17,9 @@
   width: 10rem;
   opacity: 0;
   animation: fadeShrink 2s ease-in;
+  -webkit-animation: fadeShrink 2s ease-in;
   animation-delay: 1.7s;
+  -webkit-animation-delay: 1.7s;
   transition: all 0.1s ease-in-out;
   animation-fill-mode: forwards;
 }
@@ -28,6 +30,7 @@
   stroke-dashoffset: 685;
   opacity: 0;
   animation: dash 2s ease-in;
+  -webkit-animation: dash 2s ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -48,11 +51,6 @@
     stroke-dashoffset: 200;
   }
 
-  90% {
-    stroke-dashoffset: 0;
-    opacity: 1;
-  }
-
   99% {
     stroke-dashoffset: 0;
     opacity: 1;
@@ -71,7 +69,6 @@
 
   50% {
     opacity: 1;
-    transform: scale(1);
   }
 
   92% {
