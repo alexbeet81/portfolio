@@ -33,7 +33,7 @@ const NavBar = () => {
   const darkModeToggleIcon = isDarkMode ? <BsSunFill /> : <MdDarkMode />;
 
   return (
-    <section data-aos="fade-down" data-aos-duration="1000" >
+    <section data-aos="fade-down" data-aos-duration="500" >
       <div className={`${classes.navbar} ${navBarDarkLightClasses}`}>
         <div
           onClick={darkLightIconHandler}
