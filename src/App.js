@@ -20,10 +20,9 @@ function App() {
 
 
   useEffect(() => {
-    console.log('USE EFFECT RUNNING')
     const timer = setTimeout(() => {
       dispatch();
-    }, 3000);
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, [dispatch]);
@@ -52,6 +51,7 @@ function App() {
     <Intro />
   );
 
+  
   return <div className={backgroundClasses}>{mainComponent}</div>;
 }
 
