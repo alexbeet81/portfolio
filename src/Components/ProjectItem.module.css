@@ -48,6 +48,10 @@
   color: var(--dark-highlight);
 }
 
+.projectContainerLightMode svg:hover {
+  color: var(--light-highlight);
+}
+
 .projectContainer h2 {
   font-size: 1.5rem;
   font-weight: lighter;
