@@ -1,4 +1,4 @@
-**My Portfolio. I expect this will change over the years. But welcome to version 1.0**
+*My Portfolio. I expect this will change over the years. But welcome to version 1.0*
 
 After many hours following React tutorials, I wanted to create something from scratch and put my skills to use. Like all developers, I also needed to showcase my work!
 
@@ -12,7 +12,7 @@ I started by going into a lot of detail with the design - it actually took me lo
 
 <img width="896" alt="Screenshot 2022-06-14 at 15 59 06" src="https://user-images.githubusercontent.com/61727046/173525113-e5a16f18-7179-4e57-9bd4-2cdb50dada5b.png">
 
-**dependencies:**
+**dependencies:
 
 I used Animate on Scroll (AOS) for the animation effects. Really easy to set up and use.
 
