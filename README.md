@@ -1,4 +1,4 @@
-*My Portfolio. I expect this will change over the years. But welcome to version 1.0*
+**My Portfolio. I expect this will change over the years. But welcome to version 1.0**
 
 After many hours following React tutorials, I wanted to create something from scratch and put my skills to use. Like all developers, I also needed to showcase my work!
 
