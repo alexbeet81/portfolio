@@ -16,7 +16,7 @@ const PROJECTS = [
     title: "Free Me",
     image: Freeme,
     description:
-      "The final project from my 24-week part-time boot camp at Le Wagon. The idea behind the project was to make a portfolio creation app targeted at software developers. Users can quickly and easily set up a portfolio of their work to send to potential clients or employers. I was in charge of the back-end and managing the git-hub repo. I also helped in the creation of the front end.",
+      "The final project from my 24-week part-time boot camp at Le Wagon. The idea behind the project was to make a portfolio creation app targeted at software developers. Users can quickly and easily set up a portfolio of their work to send to potential clients or employers. I was in charge of the back-end and managing the git-hub repo. I also helped in the creation of the front end. To explore the site, use username: alex@alex.com password: 123456",
     tech: "Ruby, Ruby on Rails and Heroku",
     projectLink: "https://freemedom.herokuapp.com/",
     gitRepo: "https://github.com/alexbeet81/freeme",
