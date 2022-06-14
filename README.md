@@ -14,7 +14,18 @@ I started by going into a lot of detail with the design - it actually took me lo
 
 **dependencies:**
 
+I used Animate on Scroll (AOS) for the animation effects. Really easy to set up and use.
+
+find out more here -> https://github.com/michalsnik/aos
+
+**Set Up**
+
+If you would like to use the site, simply make sure to run NPM install.
 
 **Notes:**
 
 Feel free to fork and use this design. Please let me know if you do! Also, please make sure to link back to my github.
+
+**TO DO:**
+
+I would like to add a messaging function so viewers can send me a message directly without having to be redirected to my gmail. 
