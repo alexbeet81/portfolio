@@ -12,7 +12,7 @@ I started by going into a lot of detail with the design - it actually took me lo
 
 <img width="896" alt="Screenshot 2022-06-14 at 15 59 06" src="https://user-images.githubusercontent.com/61727046/173525113-e5a16f18-7179-4e57-9bd4-2cdb50dada5b.png">
 
-**dependencies:
+**dependencies:**
 
 I used Animate on Scroll (AOS) for the animation effects. Really easy to set up and use.
 
