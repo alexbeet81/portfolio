@@ -52,7 +52,7 @@ const ProjectItem = (props) => {
           <p>{props.description}</p>
           <div className={classes.projectContentFooter}>
             <p>
-              Made using <a className={techUsedClasses}>{props.tech}</a>
+              Made using <span className={techUsedClasses}>{props.tech}</span>
             </p>
           </div>
         </div>
