@@ -31,6 +31,7 @@ const Contact = () => {
           you are just interested in working on a hobby project with me, please
           get in touch.
         </p>
+        <p>Mobile: 07405 656326</p>
         <a href="mailto:alexbeet1234@gmail.com">
           <button
             type="button"
