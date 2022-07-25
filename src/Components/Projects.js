@@ -6,11 +6,22 @@ import BeetBlogImage from "../images/beetblog.png";
 import Classicar from "../images/classicar.png";
 import CheckItOff from "../images/checkitoff.png";
 import Freeme from "../images/freeme.png";
+import GreenGymm from "../images/greengym.png";
 import DarkLightContext from "../store/dark-light-context";
 import ProjectItem from "./ProjectItem";
 import classes from "./Projects.module.css";
 
 const PROJECTS = [
+  {
+    id: "p5",
+    title: "Green Gym",
+    image: GreenGymm,
+    description:
+      "My first professional gig! Build by a team of three, I was responsible for creating a working prototype using Figma. • Made using React and React Query, with app wide state using Context API, and multi language selection using the i18Next frame-work.",
+    tech: "React, React Query and Ruby on Rails",
+    projectLink: "https://greengym.com.cn/",
+    gitRepo: "https://github.com/jrig95/green-gym-frontend",
+  },
   {
     id: "p1",
     title: "Free Me",
