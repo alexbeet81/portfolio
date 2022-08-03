@@ -98,7 +98,7 @@ const Projects = () => {
         description={project.description}
         tech={project.tech}
         projectLink={project.projectLink}
-        gitReop={project.gitRepo}
+        gitRepo={project.gitRepo}
       />
     );
   });
@@ -112,7 +112,7 @@ const Projects = () => {
         image={otherProject.image}
         description={otherProject.description}
         projectLink={otherProject.projectLink}
-        gitReop={otherProject.gitRepo}
+        gitRepo={otherProject.gitRepo}
       />
     );
   });
@@ -127,6 +127,9 @@ const Projects = () => {
         A Few Projects I've Built
       </h1>
       {projectList}
+      <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+        Other Smaller Projects
+      </h1>
       <div className={classes.otherProjects}>{otherProjectList}</div>
     </section>
   );

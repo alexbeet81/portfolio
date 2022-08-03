@@ -49,7 +49,7 @@ const OtherProjectItem = (props) => {
               </a>
               <a
                 href={props.gitRepo}
-                targe="_blank"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiFillGithub />
