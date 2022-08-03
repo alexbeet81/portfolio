@@ -22,7 +22,7 @@ const OtherProjectItem = (props) => {
     : classes.techUsedLight;
 
   return (
-    <div data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">
+    <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
       <div className={`${classes.projectContainer} ${projectClasses}`}>
         <div className={classes.image}>
           <a
@@ -41,7 +41,7 @@ const OtherProjectItem = (props) => {
             <h2>{props.title}</h2>
             <div className={classes.icons}>
               <a
-                href={props.projectLink}
+                href={props.projectLinkgi}
                 target="_blank"
                 rel="noopener noreferrer"
               >
