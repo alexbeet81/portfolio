@@ -1,0 +1,110 @@
+.projectContainer {
+  min-height: 10rem;
+  /* max-width: 100rem; */
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 1rem;
+}
+
+.projectContainerDarkMode {
+  background-color: rgba(40, 55, 84, 0.2);
+  /* background-color: rgb(172, 60, 60); */
+}
+
+.projectContainerLightMode {
+  background-color: rgba(241, 242, 208, 0.2);
+}
+
+.projectContainerDarkMode h2,
+.projectContainerDarkMode p,
+.projectContainerDarkMode svg {
+  color: var(--dark-text-two);
+}
+
+.projectContainerLightMode h2,
+.projectContainerLightMode p,
+.projectContainerLightMode svg {
+  color: var(--light-text-two);
+}
+
+.projectContentFooter {
+  display: flex;
+}
+
+.techUsedDark {
+  color: var(--dark-highlight);
+}
+
+.techUsedLight {
+  color: var(--light-highlight);
+}
+
+.projectContainer svg {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.projectContainerDarkMode svg:hover {
+  color: var(--dark-highlight);
+}
+
+.projectContainerLightMode svg:hover {
+  color: var(--light-highlight);
+}
+
+.projectContainer h2 {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin: 0;
+}
+
+.image {
+  display: flex;
+  margin: 0.5rem;
+  max-width: 10rem;
+}
+
+.image a {
+  display: flex;
+}
+
+/* Max-width from 29rem to 19rem */
+
+.image img {
+  max-width: 9rem;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image img:hover {
+  opacity: 1;
+}
+
+.projectContent {
+  margin: 0 0.5rem;
+}
+
+.titleAndIcons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons {
+  font-size: 2rem;
+  margin: 0.25rem 0 0 0;
+}
+
+@media (max-width: 720px) {
+  .image {
+    display: none;
+  }
+  .projectContainer {
+    max-width: 22rem;
+    display: block;
+  }
+}

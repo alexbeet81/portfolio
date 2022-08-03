@@ -7,8 +7,10 @@ import Classicar from "../images/classicar.png";
 import CheckItOff from "../images/checkitoff.png";
 import Freeme from "../images/freeme.png";
 import GreenGymm from "../images/greengym.png";
+import CatList from "../images/cat-list.png";
 import DarkLightContext from "../store/dark-light-context";
 import ProjectItem from "./ProjectItem";
+import OtherProjectItem from "./OtherProjectItem";
 import classes from "./Projects.module.css";
 
 const PROJECTS = [
@@ -33,16 +35,6 @@ const PROJECTS = [
     gitRepo: "https://github.com/alexbeet81/freeme",
   },
   {
-    id: "p2",
-    title: "Beet Blog",
-    image: BeetBlogImage,
-    description:
-      "After sinking many hours into tutorials on React, I decided to put to use what I had learned and created a simple blog post site. My aims were to build a simple multi-page SPA with React Router; have persistent login; create forms with validation feedback and use a custom hook for api-calls.",
-    tech: "React and Firebase",
-    projectLink: "https://beet-blog.web.app/",
-    gitRepo: "https://github.com/alexbeet81/beet-blog",
-  },
-  {
     id: "p3",
     title: "Classicar",
     image: Classicar,
@@ -61,6 +53,27 @@ const PROJECTS = [
     tech: "Ruby, Ruby on Rails and Heroku",
     projectLink: "https://checkitoff-shop.herokuapp.com/",
     gitRepo: "https://github.com/alexbeet81/check_it_off",
+  },
+];
+
+const OTHER_PROJECTS = [
+  {
+    id: "op1",
+    title: "Beet Blog",
+    image: BeetBlogImage,
+    description:
+      "A simple blog post site. My aims were to build a simple multi-page SPA with React Router; have persistent login; create forms with validation feedback and use a custom hook for api-calls.",
+    projectLink: "https://beet-blog.web.app/",
+    gitRepo: "https://github.com/alexbeet81/beet-blog",
+  },
+  {
+    id: "op2",
+    title: "Cat List",
+    image: CatList,
+    description:
+      "Created using the Cat API. A quick front end task. Created with React and React Query",
+    projectLink: "https://cat-list-77efe.web.app/",
+    gitRepo: "https://github.com/alexbeet81/cat-list",
   },
 ];
 
@@ -85,7 +98,21 @@ const Projects = () => {
         description={project.description}
         tech={project.tech}
         projectLink={project.projectLink}
-        gitReop={project.gitRepo}
+        gitRepo={project.gitRepo}
+      />
+    );
+  });
+
+  const otherProjectList = OTHER_PROJECTS.map((otherProject) => {
+    return (
+      <OtherProjectItem
+        key={otherProject.id}
+        id={otherProject.id}
+        title={otherProject.title}
+        image={otherProject.image}
+        description={otherProject.description}
+        projectLink={otherProject.projectLink}
+        gitRepo={otherProject.gitRepo}
       />
     );
   });
@@ -100,6 +127,10 @@ const Projects = () => {
         A Few Projects I've Built
       </h1>
       {projectList}
+      <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+        Other Smaller Projects
+      </h1>
+      <div className={classes.otherProjects}>{otherProjectList}</div>
     </section>
   );
 };

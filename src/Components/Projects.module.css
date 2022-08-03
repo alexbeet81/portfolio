@@ -15,10 +15,16 @@
   color: var(--light-bg-one);
 }
 
+.otherProjects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
 @media (max-width: 720px) {
-  .projectsSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .otherProjects {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
   }
 }
