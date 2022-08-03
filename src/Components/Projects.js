@@ -9,6 +9,7 @@ import Freeme from "../images/freeme.png";
 import GreenGymm from "../images/greengym.png";
 import DarkLightContext from "../store/dark-light-context";
 import ProjectItem from "./ProjectItem";
+import OtherProjectItem from "./OtherProjectItem";
 import classes from "./Projects.module.css";
 
 const PROJECTS = [
@@ -100,6 +101,7 @@ const Projects = () => {
         A Few Projects I've Built
       </h1>
       {projectList}
+      <OtherProjectItem />
     </section>
   );
 };
