@@ -8,6 +8,7 @@ import CheckItOff from "../images/checkitoff.png";
 import Freeme from "../images/freeme.png";
 import GreenGymm from "../images/greengym.png";
 import CatList from "../images/cat-list.png";
+import DadJokes from "../images/dadjokes.png";
 import DarkLightContext from "../store/dark-light-context";
 import ProjectItem from "./ProjectItem";
 import OtherProjectItem from "./OtherProjectItem";
@@ -75,6 +76,14 @@ const OTHER_PROJECTS = [
     projectLink: "https://cat-list-77efe.web.app/",
     gitRepo: "https://github.com/alexbeet81/cat-list",
   },
+  {
+    id: "op3",
+    title: "Dad Jokes",
+    image: DadJokes,
+    description: "A very quick project created using Dad Jokes API. My first try at Typescript. Best viewed on mobile. The jokes are REALLY bad, sorry.",
+    projectLink: "https://dad-jokes-a6410.web.app/",
+    gitRepo: "https://github.com/alexbeet81/dad-jokes"
+  }
 ];
 
 const Projects = () => {
