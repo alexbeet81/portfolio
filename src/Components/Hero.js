@@ -31,23 +31,20 @@ const Hero = () => {
           Alex Pritchard
         </h2>
         <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-          A Full-Stack Developer In Training
+          A Full-Stack Developer
         </h3>
         <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-          My current development job is to learn as much as possible and improve
-          my skills. I am just beginning my journey as a full-stack developer. I
-          am interested in all aspects of the process, from Figma design to
-          working on the back-end.
-        </p>
-        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-          I recently completed a 24-Week remote full stack bootcamp with{" "}
-          <a
-            href="https://www.lewagon.com"
+          Experienced junior full-stack developer specializing in Ruby on Rails. 
+          Committed to continuous learning and skill enhancement. 
+          Passionate about all aspects of the development process, from design to back-end work. 
+          Excited to collaborate on innovative projects.{" "}
+          <a 
+            href="mailto:alexbeet1234@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             {" "}
-            LeWagon
+            Let's connect!
           </a>
         </p>
       </div>

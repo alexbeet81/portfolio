@@ -27,6 +27,18 @@ const Learning = () => {
         <div className={classes.iconGrid}>
           <div className={classes.iconItem}>
             <div className={classes.icon}>
+              <SiRubyonrails />
+            </div>
+            <h2>Ruby On Rails</h2>
+          </div>
+          <div className={classes.iconItem}>
+            <div className={classes.icon}>
+              <SiRuby />
+            </div>
+            <h2>Ruby</h2>
+          </div>
+          <div className={classes.iconItem}>
+            <div className={classes.icon}>
               <SiJavascript />
             </div>
             <h2>JavaScript (ES6)</h2>
@@ -42,18 +54,6 @@ const Learning = () => {
               <FaNodeJs />
             </div>
             <h2>Node.js</h2>
-          </div>
-          <div className={classes.iconItem}>
-            <div className={classes.icon}>
-              <SiRuby />
-            </div>
-            <h2>Ruby</h2>
-          </div>
-          <div className={classes.iconItem}>
-            <div className={classes.icon}>
-              <SiRubyonrails />
-            </div>
-            <h2>Ruby On Rails</h2>
           </div>
           <div className={classes.iconItem}>
             <div className={classes.icon}>

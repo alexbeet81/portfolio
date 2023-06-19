@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 
-import Resume from "../../resume/resume.pdf";
+import Resume from "../../resume/resume.png";
 import DarkLightContext from "../../store/dark-light-context";
 import classes from "./NavBar.module.css";
 
