@@ -41,7 +41,7 @@ const OtherProjectItem = (props) => {
             <h2>{props.title}</h2>
             <div className={classes.icons}>
               <a
-                href={props.projectLinkgi}
+                href={props.projectLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >

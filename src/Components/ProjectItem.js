@@ -24,7 +24,7 @@ const ProjectItem = (props) => {
   return (
     <div data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">
       <div className={`${classes.projectContainer} ${projectClasses}`}>
-        <div className={classes.image}>
+        {/* <div className={classes.image}>
           <a
             href={`${props.projectLink}`}
             target="_blank"
@@ -32,18 +32,21 @@ const ProjectItem = (props) => {
           >
             <img src={props.image} alt={`Screenshot of ${props.title}`} />
           </a>
+        </div> */}
+        <div className={classes.image}>
+          <img src={props.image} alt={`Screenshot of ${props.title}`} />
         </div>
         <div className={classes.projectContent}>
           <div className={classes.titleAndIcons}>
             <h2>{props.title}</h2>
             <div className={classes.icons}>
-              <a
+              {/* <a
                 href={props.projectLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <BiLinkExternal />
-              </a>
+              </a> */}
               <a href={props.gitRepo} target="_blank" rel="noopener noreferrer">
                 <AiFillGithub />
               </a>
