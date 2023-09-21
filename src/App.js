@@ -8,6 +8,7 @@ import MainPage from "./Pages/MainPage";
 import CVPage from "./Pages/CVPage";
 import Footer from "./Components/Footer";
 import { Routes, Route } from "react-router-dom";
+import { setItemWithExpiry, getItemWithExpiry } from "./utils/localStorageHelper";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -23,14 +24,14 @@ function App() {
 
   useEffect(() => {
     // Check if the user has visted the page before.
-    const hasVisted = localStorage.getItem('hasVisited');
+    const hasVisted = getItemWithExpiry('hasVisited');
 
     if (hasVisted) {
       dispatch({type: 'ANIMATION_FINISHED'})
     } else {
       const timer = setTimeout(() => {
         dispatch({ type: 'ANIMATION_FINISHED'});
-        localStorage.setItem('hasVisited', 'true');
+        setItemWithExpiry('hasVisited', 'true', 3600000);
       }, 4000);
 
       console.log('Setting hasVisited to true in localStorage');
