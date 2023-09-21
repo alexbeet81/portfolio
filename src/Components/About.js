@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import { getItemWithExpiry } from "../utils/localStorageHelper"
 import profilePhoto from "../images/profile-photo.png";
 import DarkLightContext from "../store/dark-light-context";
 import classes from "./About.module.css";
@@ -11,6 +12,7 @@ const About = () => {
     once: true,
   });
 
+  const hasVisited = getItemWithExpiry('hasVisited');
   const darkLightCtx = useContext(DarkLightContext);
 
   const isDarkMode = darkLightCtx.isDarkMode;
@@ -20,7 +22,7 @@ const About = () => {
     : classes.aboutSectionLightMode;
 
   return (
-    <div data-aos="fade-up" data-aos-duration="1000">
+    <div {...(hasVisited ? {} : {"data-aos": "fade-up", "data-aos-duration": "1000"})}>
       <section
         id="about"
         className={`${classes.aboutSection} ${aboutSectionClasses}`}
