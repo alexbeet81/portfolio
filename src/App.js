@@ -21,13 +21,21 @@ const reducer = (state, action) => {
 function App() {
   const [state, dispatch] = useReducer(reducer, { animationIsFinished: false });
 
-
   useEffect(() => {
-    const timer = setTimeout(() => {
-      dispatch({ type: 'ANIMATION_FINISHED'});
-    }, 4000);
+    // Check if the user has visted the page before.
+    const hasVisted = localStorage.getItem('hasVisited');
 
-    return () => clearTimeout(timer);
+    if (hasVisted) {
+      dispatch({type: 'ANIMATION_FINISHED'})
+    } else {
+      const timer = setTimeout(() => {
+        dispatch({ type: 'ANIMATION_FINISHED'});
+        localStorage.setItem('hasVisited', 'true');
+      }, 4000);
+
+      console.log('Setting hasVisited to true in localStorage');
+      return () => clearTimeout(timer);
+    }  
   }, [dispatch]);
 
   const darkLightCtx = useContext(DarkLightContext);
