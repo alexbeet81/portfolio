@@ -11,8 +11,17 @@ import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 
+// const reducer = (state, action) => {
+//   return { animationIsFinished: true };
+// };
+
 const reducer = (state, action) => {
-  return { animationIsFinished: true };
+  switch (action.type) {
+    case 'ANIMATION_FINISHED':
+      return { animationIsFinished: true };
+    default:
+      return state;
+  }
 };
 
 function App() {
@@ -21,7 +30,7 @@ function App() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      dispatch();
+      dispatch({ type: 'ANIMATION_FINISHED'});
     }, 4000);
 
     return () => clearTimeout(timer);
