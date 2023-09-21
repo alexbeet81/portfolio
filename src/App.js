@@ -4,16 +4,10 @@ import DarkLightContext from "./store/dark-light-context";
 
 import Intro from "./Components/Intro";
 import NavBar from "./Components/UI/NavBar";
-import Hero from "./Components/Hero";
-import About from "./Components/About";
-import Learning from "./Components/Learning";
-import Projects from "./Components/Projects";
-import Contact from "./Components/Contact";
+import MainPage from "./Pages/MainPage";
+import CVPage from "./Pages/CVPage";
 import Footer from "./Components/Footer";
-
-// const reducer = (state, action) => {
-//   return { animationIsFinished: true };
-// };
+import { Routes, Route } from "react-router-dom";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -48,11 +42,10 @@ function App() {
       {" "}
       <NavBar />
       <main className={classes.mainContainer}>
-        <Hero />
-        <About />
-        <Learning />
-        <Projects />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<MainPage />}/>
+          <Route path="/cv" element={<CVPage />}/>
+        </Routes>
       </main>
       <Footer />
     </div>
