@@ -111,6 +111,7 @@ const Projects = () => {
         tech={project.tech}
         projectLink={project.projectLink}
         gitRepo={project.gitRepo}
+        hasVisited={hasVisited}
       />
     );
   });
@@ -125,6 +126,7 @@ const Projects = () => {
         description={otherProject.description}
         projectLink={otherProject.projectLink}
         gitRepo={otherProject.gitRepo}
+        hasVisited={hasVisited}
       />
     );
   });

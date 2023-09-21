@@ -22,7 +22,7 @@ const OtherProjectItem = (props) => {
     : classes.techUsedLight;
 
   return (
-    <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+    <div {...(props.hasVisited ? {} : {"data-aos": "fade-up", "data-aos-duration": "1000", "data-aos-once": "true"})}>
       <div className={`${classes.projectContainer} ${projectClasses}`}>
         <div className={classes.image}>
           <a
