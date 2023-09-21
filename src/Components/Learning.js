@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiJavascript, SiRubyonrails, SiRuby, SiCss3 } from "react-icons/si";
+import { getItemWithExpiry } from "../utils/localStorageHelper"
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -10,6 +11,7 @@ import classes from "./Learning.module.css";
 const Learning = () => {
   AOS.init();
 
+  const hasVisited = getItemWithExpiry('hasVisited');
   const darkLightCtx = useContext(DarkLightContext);
 
   const isDarkMode = darkLightCtx.isDarkMode;
@@ -19,7 +21,7 @@ const Learning = () => {
     : classes.learningLightMode;
 
   return (
-    <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+    <div {...(hasVisited ? {} : { "data-aos": "fade-down", "data-aos-duration": "1000", "data-aos-once": "true" })}>
       <section
         className={`${classes.learningSection} ${learningSectionClasses}`}
       >

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-scroll";
 import { MdDarkMode } from "react-icons/md";
 import { BsSunFill } from "react-icons/bs";
+import { getItemWithExpiry } from "../../utils/localStorageHelper"
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -15,6 +16,7 @@ const NavBar = () => {
     once: true
   });
 
+  const hasVisited = getItemWithExpiry('hasVisited');
   const darkLightCtx = useContext(DarkLightContext);
 
   const isDarkMode = darkLightCtx.isDarkMode;
@@ -35,7 +37,9 @@ const NavBar = () => {
   const darkModeToggleIcon = isDarkMode ? <BsSunFill /> : <MdDarkMode />;
 
   return (
-    <section data-aos="fade-down" data-aos-duration="500" >
+    <section 
+      {...(hasVisited ? {} : { "data-aos": "fade-down", "data-aos-duration": "500" })}
+    >
       <div className={`${classes.navbar} ${navBarDarkLightClasses}`}>
         <div
           onClick={darkLightIconHandler}
