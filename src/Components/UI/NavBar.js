@@ -88,7 +88,7 @@ const NavBar = () => {
             Contact
           </Link>
           <a href={Resume} target="_blank" rel="noopener noreferrer">
-            Resume
+            CV
           </a>
         </div>
       </div>
