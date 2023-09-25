@@ -1,0 +1,24 @@
+.headerButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  width: 100%;
+  background-color: var(--dark-bg-two);
+  border: none;
+}
+
+.headerButton > p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark-text-two);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.playIcon {
+  color: var(--dark-text-two);
+  transition: all 0.3s ease-in-out;
+}

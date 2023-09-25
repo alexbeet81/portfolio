@@ -3,10 +3,9 @@ import { Link } from "react-scroll";
 import { Link as RouteLink, useLocation } from "react-router-dom";
 import { MdDarkMode } from "react-icons/md";
 import { BsSunFill } from "react-icons/bs";
-import { getItemWithExpiry } from "../../utils/localStorageHelper"
+import { getItemWithExpiry } from "../../utils/localStorageHelper";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 
 import Resume from "../../resume/resume.png";
 import DarkLightContext from "../../store/dark-light-context";
@@ -14,11 +13,11 @@ import classes from "./NavBar.module.css";
 
 const NavBar = () => {
   AOS.init({
-    once: true
+    once: true,
   });
 
   const location = useLocation();
-  const hasVisited = getItemWithExpiry('hasVisited');
+  const hasVisited = getItemWithExpiry("hasVisited");
   const darkLightCtx = useContext(DarkLightContext);
 
   const isDarkMode = darkLightCtx.isDarkMode;
@@ -37,12 +36,13 @@ const NavBar = () => {
     : classes.iconLightMode;
 
   const darkModeToggleIcon = isDarkMode ? <BsSunFill /> : <MdDarkMode />;
-  const isCVPage = location.pathname == "/cv"
-  
+  const isCVPage = location.pathname == "/cv";
 
   return (
-    <section 
-      {...(hasVisited ? {} : { "data-aos": "fade-down", "data-aos-duration": "500" })}
+    <section
+      {...(hasVisited
+        ? {}
+        : { "data-aos": "fade-down", "data-aos-duration": "500" })}
     >
       <div className={`${classes.navbar} ${navBarDarkLightClasses}`}>
         <div
@@ -52,34 +52,28 @@ const NavBar = () => {
           {darkModeToggleIcon}
         </div>
         <div className={classes.navLinks}>
-          {isCVPage ? 
-          <RouteLink to="/">
-            Home
-          </RouteLink>
-          :<Link
-            to="home"
-            name="home"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            Home
-          </Link>}
-          {isCVPage && 
+          {isCVPage ? (
+            <RouteLink to="/">Home</RouteLink>
+          ) : (
+            <Link
+              to="home"
+              name="home"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              Home
+            </Link>
+          )}
+          {isCVPage && (
             <>
-              <RouteLink to="/#about">
-                About
-              </RouteLink>
-              <RouteLink to="/#work">
-                Work
-              </RouteLink>
-              <RouteLink to="/#contact">
-                Contact
-              </RouteLink>
+              <RouteLink to="/#about">About</RouteLink>
+              <RouteLink to="/#work">Work</RouteLink>
+              <RouteLink to="/#contact">Contact</RouteLink>
             </>
-          }
-          {!isCVPage && 
+          )}
+          {!isCVPage && (
             <>
               <Link
                 to="about"
@@ -111,10 +105,8 @@ const NavBar = () => {
                 Contact
               </Link>
             </>
-          }
-          <RouteLink to="/cv">
-            CV
-          </RouteLink>
+          )}
+          <RouteLink to="/cv">CV</RouteLink>
           {/* <a href={Resume} target="_blank" rel="noopener noreferrer">
             CV
           </a> */}

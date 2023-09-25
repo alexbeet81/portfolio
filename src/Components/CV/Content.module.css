@@ -1,0 +1,10 @@
+.container {
+}
+
+.container p {
+  color: var(--dark-text-two);
+}
+
+.jobTitle {
+  display: flex;
+}
