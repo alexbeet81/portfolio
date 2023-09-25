@@ -1,9 +1,16 @@
 import React from 'react';
+import CVSection from '../Components/CV/CVSection';
+import { cvData } from '../Components/CV/Data/cv-data';
 
 const CVPage = () => {
+
+  const sections = cvData.forEach(entry => {
+    <CVSection header={entry.header} content={entry.content}/>
+  })
+
   return (
     <>
-    <h1>This is a test</h1>
+      {sections}
     </>
   );
 }

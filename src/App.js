@@ -23,6 +23,14 @@ function App() {
   const [state, dispatch] = useReducer(reducer, { animationIsFinished: false });
 
   useEffect(() => {
+    if (window.location.hash) {
+        const id = window.location.hash.substring(1);
+        const element = document.getElementById(id);
+        if (element) element.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [window.location.hash]);
+
+  useEffect(() => {
     // Check if the user has visted the page before.
     const hasVisted = getItemWithExpiry('hasVisited');
 

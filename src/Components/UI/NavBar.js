@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-scroll";
+import { Link as RouteLink, useLocation } from "react-router-dom";
 import { MdDarkMode } from "react-icons/md";
 import { BsSunFill } from "react-icons/bs";
 import { getItemWithExpiry } from "../../utils/localStorageHelper"
@@ -16,6 +17,7 @@ const NavBar = () => {
     once: true
   });
 
+  const location = useLocation();
   const hasVisited = getItemWithExpiry('hasVisited');
   const darkLightCtx = useContext(DarkLightContext);
 
@@ -35,6 +37,8 @@ const NavBar = () => {
     : classes.iconLightMode;
 
   const darkModeToggleIcon = isDarkMode ? <BsSunFill /> : <MdDarkMode />;
+  const isCVPage = location.pathname == "/cv"
+  
 
   return (
     <section 
@@ -48,7 +52,11 @@ const NavBar = () => {
           {darkModeToggleIcon}
         </div>
         <div className={classes.navLinks}>
-          <Link
+          {isCVPage ? 
+          <RouteLink to="/">
+            Home
+          </RouteLink>
+          :<Link
             to="home"
             name="home"
             spy={true}
@@ -57,39 +65,59 @@ const NavBar = () => {
             duration={500}
           >
             Home
-          </Link>
-          <Link
-            to="about"
-            name="about"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            About
-          </Link>
-          <Link
-            to="work"
-            name="work"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            Work
-          </Link>
-          <Link
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            Contact
-          </Link>
-          <a href={Resume} target="_blank" rel="noopener noreferrer">
+          </Link>}
+          {isCVPage && 
+            <>
+              <RouteLink to="/#about">
+                About
+              </RouteLink>
+              <RouteLink to="/#work">
+                Work
+              </RouteLink>
+              <RouteLink to="/#contact">
+                Contact
+              </RouteLink>
+            </>
+          }
+          {!isCVPage && 
+            <>
+              <Link
+                to="about"
+                name="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                About
+              </Link>
+              <Link
+                to="work"
+                name="work"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Work
+              </Link>
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Contact
+              </Link>
+            </>
+          }
+          <RouteLink to="/cv">
             CV
-          </a>
+          </RouteLink>
+          {/* <a href={Resume} target="_blank" rel="noopener noreferrer">
+            CV
+          </a> */}
         </div>
       </div>
     </section>
