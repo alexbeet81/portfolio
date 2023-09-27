@@ -17,8 +17,6 @@ const Contact = () => {
     ? classes.contactSectionDarkMode
     : classes.contactSectionLightMode;
 
-  const buttonClasses = isDarkMode ? classes.buttonDark : classes.buttonLight;
-
   return (
     <div
       {...(hasVisited
@@ -42,12 +40,7 @@ const Contact = () => {
           get in touch.
         </p>
         <p>Mobile: 07405 656326</p>
-        <Button
-          href="mailto:alexbeet1234@gmail.com"
-          className={`${classes.button} ${buttonClasses}`}
-        >
-          message me
-        </Button>
+        <Button href="mailto:alexbeet1234@gmail.com">message me</Button>
       </section>
     </div>
   );

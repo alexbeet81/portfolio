@@ -3,8 +3,15 @@
 }
 
 .container p {
-  color: var(--dark-text-two);
   margin: 0;
+}
+
+.containerDarkMode p {
+  color: var(--dark-text-two);
+}
+
+.containerLightMode p {
+  color: var(--light-text-two);
 }
 
 .jobTitle {

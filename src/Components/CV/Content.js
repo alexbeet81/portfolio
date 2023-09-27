@@ -1,9 +1,13 @@
 import React from "react";
 import classes from "./Content.module.css";
 
-const Content = ({ content: { description, jobs } }) => {
+const Content = ({ content: { description, jobs }, isDarkMode }) => {
+  const containerClasses = isDarkMode
+    ? classes.containerDarkMode
+    : classes.containerLightMode;
+
   return (
-    <div className={classes.container}>
+    <div className={`${containerClasses} ${classes.container}`}>
       <p className={classes.description}>{description}</p>
       {jobs.map((job, jobIndex) => {
         return (

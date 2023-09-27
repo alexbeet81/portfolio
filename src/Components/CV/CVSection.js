@@ -5,7 +5,7 @@ import classes from "./CVSection.module.css";
 import Header from "./Header";
 import Content from "./Content";
 
-const CVSection = ({ header, content }) => {
+const CVSection = ({ header, content, isDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef(null);
 
@@ -28,6 +28,7 @@ const CVSection = ({ header, content }) => {
         className={classes.headerButton}
         header={header}
         isOpen={isOpen}
+        isDarkMode={isDarkMode}
       />
       <animated.div
         style={{
@@ -37,7 +38,7 @@ const CVSection = ({ header, content }) => {
         }}
         ref={contentRef}
       >
-        <Content content={content} />
+        <Content content={content} isDarkMode={isDarkMode} />
       </animated.div>
     </>
   );

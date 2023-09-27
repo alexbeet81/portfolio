@@ -7,7 +7,6 @@ import { getItemWithExpiry } from "../../utils/localStorageHelper";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Resume from "../../resume/resume.png";
 import DarkLightContext from "../../store/dark-light-context";
 import classes from "./NavBar.module.css";
 
@@ -107,9 +106,6 @@ const NavBar = () => {
             </>
           )}
           <RouteLink to="/cv">CV</RouteLink>
-          {/* <a href={Resume} target="_blank" rel="noopener noreferrer">
-            CV
-          </a> */}
         </div>
       </div>
     </section>

@@ -1,7 +1,9 @@
-/* .sections {
-  
-} */
-
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 38px;
+}
 .mainContainer {
   padding-top: 100px !important;
   box-sizing: border-box;
@@ -15,21 +17,30 @@
 .mainContainer h1 {
   font-size: 2rem;
   margin-top: 0;
-  color: var(--dark-text-one);
-}
-
-.mainContainer p {
-  color: var(--dark-text-one);
 }
 
 .mainContainer a {
   text-decoration: none;
 }
 
-/* .mainContainer h1 {
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.introDark h1 {
   color: var(--dark-text-one);
 }
 
-.mainContainer h1 {
+.introDark p {
+  color: var(--dark-text-two);
+}
+
+.introLight h1 {
   color: var(--light-text-one);
-} */
+}
+
+.introLight p {
+  color: var(--light-text-two);
+}

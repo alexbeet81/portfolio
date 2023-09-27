@@ -4,22 +4,43 @@
   align-items: center;
   height: 30px;
   width: 100%;
-  background-color: var(--dark-bg-two);
   border: none;
   margin-bottom: 16px;
 }
 
-.headerButton > p {
+.headerButtonDarkMode {
+  background-color: var(--dark-bg-two);
+}
+
+.headerButtonLightMode {
+  background-color: var(--light-bg-two);
+}
+
+.headerButton p {
   margin: 0;
   font-size: 18px;
   font-weight: 700;
-  color: var(--dark-text-two);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
 }
 
-.playIcon {
+.headerButtonDarkMode p {
   color: var(--dark-text-two);
+}
+
+.headerButtonLightMode p {
+  color: var(--light-text-two);
+}
+
+.playIcon {
   transition: all 0.3s ease-in-out;
+}
+
+.playIconDarkMode {
+  color: var(--dark-text-two);
+}
+
+.playIconLightMode {
+  color: var(--light-text-two);
 }
