@@ -6,6 +6,7 @@
   width: 100%;
   background-color: var(--dark-bg-two);
   border: none;
+  margin-bottom: 16px;
 }
 
 .headerButton > p {

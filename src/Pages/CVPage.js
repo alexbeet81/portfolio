@@ -14,7 +14,15 @@ const CVPage = () => {
     );
   });
 
-  return <div className={classes.sections}>{cvSections}</div>;
+  return (
+    <div className={classes.mainContainer}>
+      <div className={classes.intro}>
+        <h1>CV</h1>
+        <p>Dive into each section below to uncover my professional journey.</p>
+      </div>
+      <div className={classes.sections}>{cvSections}</div>
+    </div>
+  );
 };
 
 export default CVPage;

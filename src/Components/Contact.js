@@ -3,13 +3,14 @@ import AOS from "aos";
 
 import classes from "./Contact.module.css";
 import DarkLightContext from "../store/dark-light-context";
-import { getItemWithExpiry } from "../utils/localStorageHelper"
+import { getItemWithExpiry } from "../utils/localStorageHelper";
+import Button from "./UI/Button";
 
 const Contact = () => {
   AOS.init();
 
   const darkLightCtx = useContext(DarkLightContext);
-  const hasVisited = getItemWithExpiry('hasVisited');
+  const hasVisited = getItemWithExpiry("hasVisited");
   const isDarkMode = darkLightCtx.isDarkMode;
 
   const contactClasses = isDarkMode
@@ -19,7 +20,15 @@ const Contact = () => {
   const buttonClasses = isDarkMode ? classes.buttonDark : classes.buttonLight;
 
   return (
-    <div {...(hasVisited ? {} : {"data-aos": "fade-up", "data-aos-duration": "1000", "data-aos-once": "true"})}>
+    <div
+      {...(hasVisited
+        ? {}
+        : {
+            "data-aos": "fade-up",
+            "data-aos-duration": "1000",
+            "data-aos-once": "true",
+          })}
+    >
       <section
         id="contact"
         className={`${classes.contactSection} ${contactClasses}`}
@@ -33,14 +42,12 @@ const Contact = () => {
           get in touch.
         </p>
         <p>Mobile: 07405 656326</p>
-        <a href="mailto:alexbeet1234@gmail.com">
-          <button
-            type="button"
-            className={`${classes.button} ${buttonClasses}`}
-          >
-            message me
-          </button>
-        </a>
+        <Button
+          href="mailto:alexbeet1234@gmail.com"
+          className={`${classes.button} ${buttonClasses}`}
+        >
+          message me
+        </Button>
       </section>
     </div>
   );

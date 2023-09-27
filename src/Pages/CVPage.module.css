@@ -1,3 +1,35 @@
-.sections {
-  padding-top: 100px;
+/* .sections {
+  
+} */
+
+.mainContainer {
+  padding-top: 100px !important;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100rem;
+  min-height: 100vh;
+  padding: 0 9rem;
 }
+
+.mainContainer h1 {
+  font-size: 2rem;
+  margin-top: 0;
+  color: var(--dark-text-one);
+}
+
+.mainContainer p {
+  color: var(--dark-text-one);
+}
+
+.mainContainer a {
+  text-decoration: none;
+}
+
+/* .mainContainer h1 {
+  color: var(--dark-text-one);
+}
+
+.mainContainer h1 {
+  color: var(--light-text-one);
+} */
