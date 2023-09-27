@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-scroll";
 import { Link as RouteLink, useLocation } from "react-router-dom";
 import { MdDarkMode } from "react-icons/md";
@@ -16,6 +16,11 @@ const NavBar = () => {
   });
 
   const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   const hasVisited = getItemWithExpiry("hasVisited");
   const darkLightCtx = useContext(DarkLightContext);
 
