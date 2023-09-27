@@ -1,10 +1,38 @@
 .container {
+  padding: 14px 18px 14px 18px;
 }
 
 .container p {
   color: var(--dark-text-two);
+  margin: 0;
 }
 
 .jobTitle {
   display: flex;
+}
+
+.description {
+  margin-bottom: 14px !important;
+}
+
+.jobContainer {
+  margin: 0px 8px 8px 8px !important;
+}
+
+.dates {
+  font-weight: 400;
+  margin-right: 8px !important;
+}
+
+.jobTitle {
+  font-weight: 700;
+  margin-bottom: 8px !important;
+}
+
+.jobDescription {
+  margin-bottom: 8px !important;
+}
+
+.bulletPoint {
+  margin: 8px !important;
 }

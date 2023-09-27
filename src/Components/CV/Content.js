@@ -7,14 +7,21 @@ const Content = ({ content: { description, jobs } }) => {
       <p className={classes.description}>{description}</p>
       {jobs.map((job, jobIndex) => {
         return (
-          <div key={jobIndex}>
+          <div key={jobIndex} className={classes.jobContainer}>
             <div className={classes.jobTitle}>
-              <p>{job.dates}</p>
-              <p>{job.jobTitle}</p>
+              <p className={classes.dates}>{job.dates}</p>
+              <p className={classes.jobTitle}>{job.jobTitle}</p>
             </div>
-            <p>{job.jobDescription}</p>
+            <p className={classes.jobDescription}>{job.jobDescription}</p>
             {job.bulletPoints.map((bulletPoint, bulletIndex) => {
-              return <p key={`bullet-${bulletIndex}`}>• ${bulletPoint}</p>;
+              return (
+                <p
+                  key={`bullet-${bulletIndex}`}
+                  className={classes.bulletPoint}
+                >
+                  • {bulletPoint}
+                </p>
+              );
             })}
           </div>
         );
