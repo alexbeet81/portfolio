@@ -14,6 +14,8 @@ import ProjectItem from "./ProjectItem";
 import OtherProjectItem from "./OtherProjectItem";
 import classes from "./Projects.module.css";
 
+import { getItemWithExpiry } from "../utils/localStorageHelper"
+
 const PROJECTS = [
   {
     id: "p5",
@@ -89,6 +91,7 @@ const OTHER_PROJECTS = [
 const Projects = () => {
   AOS.init();
 
+  const hasVisited = getItemWithExpiry('hasVisited');
   const darkLightCtx = useContext(DarkLightContext);
 
   const isDarkMode = darkLightCtx.isDarkMode;
@@ -108,6 +111,7 @@ const Projects = () => {
         tech={project.tech}
         projectLink={project.projectLink}
         gitRepo={project.gitRepo}
+        hasVisited={hasVisited}
       />
     );
   });
@@ -122,9 +126,12 @@ const Projects = () => {
         description={otherProject.description}
         projectLink={otherProject.projectLink}
         gitRepo={otherProject.gitRepo}
+        hasVisited={hasVisited}
       />
     );
   });
+
+  const aosAttributes = (hasVisited ? {} : { "data-aos": "fade-up", "data-aos-duration": "1000", "data-aos-once": "true" })
 
   return (
     <section
@@ -132,11 +139,11 @@ const Projects = () => {
       name="work"
       className={`${classes.projectsSection} ${projectSectionClasses}`}
     >
-      <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+      <h1 {...aosAttributes}>
         A Few Projects I've Built
       </h1>
       {projectList}
-      <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+      <h1 {...aosAttributes}>
         Other Smaller Projects
       </h1>
       <div className={classes.otherProjects}>{otherProjectList}</div>

@@ -1,0 +1,46 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 38px;
+}
+.mainContainer {
+  padding-top: 100px !important;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100rem;
+  min-height: 100vh;
+  padding: 0 9rem;
+}
+
+.mainContainer h1 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.mainContainer a {
+  text-decoration: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.introDark h1 {
+  color: var(--dark-text-one);
+}
+
+.introDark p {
+  color: var(--dark-text-two);
+}
+
+.introLight h1 {
+  color: var(--light-text-one);
+}
+
+.introLight p {
+  color: var(--light-text-two);
+}

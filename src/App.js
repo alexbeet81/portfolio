@@ -4,27 +4,47 @@ import DarkLightContext from "./store/dark-light-context";
 
 import Intro from "./Components/Intro";
 import NavBar from "./Components/UI/NavBar";
-import Hero from "./Components/Hero";
-import About from "./Components/About";
-import Learning from "./Components/Learning";
-import Projects from "./Components/Projects";
-import Contact from "./Components/Contact";
+import MainPage from "./Pages/MainPage";
+import CVPage from "./Pages/CVPage";
 import Footer from "./Components/Footer";
+import { Routes, Route } from "react-router-dom";
+import { setItemWithExpiry, getItemWithExpiry } from "./utils/localStorageHelper";
 
 const reducer = (state, action) => {
-  return { animationIsFinished: true };
+  switch (action.type) {
+    case 'ANIMATION_FINISHED':
+      return { animationIsFinished: true };
+    default:
+      return state;
+  }
 };
 
 function App() {
   const [state, dispatch] = useReducer(reducer, { animationIsFinished: false });
 
+  useEffect(() => {
+    if (window.location.hash) {
+        const id = window.location.hash.substring(1);
+        const element = document.getElementById(id);
+        if (element) element.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [window.location.hash]);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      dispatch();
-    }, 4000);
+    // Check if the user has visted the page before.
+    const hasVisted = getItemWithExpiry('hasVisited');
 
-    return () => clearTimeout(timer);
+    if (hasVisted) {
+      dispatch({type: 'ANIMATION_FINISHED'})
+    } else {
+      const timer = setTimeout(() => {
+        dispatch({ type: 'ANIMATION_FINISHED'});
+        setItemWithExpiry('hasVisited', 'true', 3600000);
+      }, 4000);
+
+      console.log('Setting hasVisited to true in localStorage');
+      return () => clearTimeout(timer);
+    }  
   }, [dispatch]);
 
   const darkLightCtx = useContext(DarkLightContext);
@@ -39,11 +59,10 @@ function App() {
       {" "}
       <NavBar />
       <main className={classes.mainContainer}>
-        <Hero />
-        <About />
-        <Learning />
-        <Projects />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<MainPage />}/>
+          <Route path="/cv" element={<CVPage />}/>
+        </Routes>
       </main>
       <Footer />
     </div>

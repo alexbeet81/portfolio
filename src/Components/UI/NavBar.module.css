@@ -85,6 +85,35 @@
   color: var(--light-highlight);
 }
 
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  animation: fadeInAnimation 0.5s forwards;
+  margin-left: 15px;
+}
+
+.fadeOut {
+  animation: fadeOutAnimation 0.5s forwards;
+  margin-left: 0;
+  width: 0;
+}
+
 @media (max-width: 412px) {
   .navbar a {
     /* font-size: 0.75rem; */
