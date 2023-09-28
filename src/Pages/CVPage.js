@@ -43,7 +43,6 @@ const CVPage = () => {
           >
             Download CV
           </Button>
-          <Button size="sm">4 Page CV</Button>
         </div>
       </div>
       <div className={classes.sections}>{cvSections}</div>
