@@ -22,7 +22,7 @@ const Header = ({ onClick, header, isOpen, isDarkMode }) => {
       <p>{header}</p>
       <FontAwesomeIcon
         icon={faPlay}
-        className={playIconClasses}
+        className={`${classes.playIcon} ${playIconClasses}`}
         rotation={rotation}
       />
     </button>
