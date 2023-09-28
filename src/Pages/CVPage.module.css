@@ -44,3 +44,15 @@
 .introLight p {
   color: var(--light-text-two);
 }
+
+@media (max-width: 1080px) {
+  .mainContainer {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .mainContainer {
+    padding: 0;
+  }
+}
