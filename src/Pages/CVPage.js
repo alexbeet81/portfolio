@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import Resume from "../resume/resume.png";
+import Resume from "../resume/resume.pdf";
 import CVSection from "../Components/CV/CVSection";
 import { cvData } from "../Components/CV/Data/cv-data";
 import classes from "./CVPage.module.css";
@@ -39,6 +39,7 @@ const CVPage = () => {
             href={Resume}
             target="_blank"
             rel="noopener noreferrer"
+            download={true}
           >
             Download CV
           </Button>

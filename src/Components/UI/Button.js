@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import DarkLightContext from "../../store/dark-light-context";
 import classes from "./Button.module.css";
 
-const Button = ({ href, children, size, target, rel }) => {
+const Button = ({ href, children, size, target, rel, download = false }) => {
   const darkLightCtx = useContext(DarkLightContext);
   const isDarkMode = darkLightCtx.isDarkMode;
 
@@ -17,7 +17,7 @@ const Button = ({ href, children, size, target, rel }) => {
   }
 
   return (
-    <a href={href} target={target} rel={rel}>
+    <a href={href} target={target} rel={rel} download={download}>
       <button
         type="button"
         className={`${buttonSizeClasses} ${darkModeButtonClasses}`}
