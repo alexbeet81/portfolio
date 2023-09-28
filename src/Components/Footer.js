@@ -22,20 +22,40 @@ const Footer = () => {
   return (
     <section className={`${classes.footerSection} ${footerClasses}`}>
       <div className={`${classes.icons} ${iconClasses}`}>
-        <a href="https://github.com/alexbeet81" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/alexbeet81"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <AiFillGithub />
         </a>
-        <a href="https://www.linkedin.com/in/alexpritchard1/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.linkedin.com/in/alexpritchard1/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <AiFillLinkedin />
         </a>
-        <a href="https://twitter.com/AlexBeet4" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://twitter.com/AlexBeet4"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <AiFillTwitterCircle />
         </a>
       </div>
-      <a href="mailto:alexbeet1234@gmail.com" target="_blank" rel="noopener noreferrer">
-        <h1>alexbeet1234@gmail.com</h1>
+      <a
+        href="mailto:alexbeet@icloud.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <h1>alexbeet@icloud.com</h1>
       </a>
-      <a href="https://github.com/alexbeet81/portfolio" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://github.com/alexbeet81/portfolio"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <h2>Made by Alex Pritchard</h2>
       </a>
     </section>

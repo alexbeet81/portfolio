@@ -40,7 +40,7 @@ const Contact = () => {
           get in touch.
         </p>
         <p>Mobile: 07405 656326</p>
-        <Button href="mailto:alexbeet1234@gmail.com">message me</Button>
+        <Button href="mailto:alexbeet@icloud.com">message me</Button>
       </section>
     </div>
   );
